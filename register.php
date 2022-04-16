@@ -1,3 +1,37 @@
+<?php
+
+include 'config.php';
+
+if(isset($_POST['submit'])){
+
+    $name = $_POST['name'];
+    $name = filter_var($name, FILTER_SANITIZE_STRING);
+    $email = $_POST['email'];
+    $email = filter_var($email, FILTER_SANITIZE_STRING);
+    $pass = $_POST['pass'];
+    $pass = filter_var($pass, FILTER_SANITIZE_STRING);
+    $cpass = $_POST['cpass'];
+    $cpass = filter_var($cpass, FILTER_SANITIZE_STRING);
+
+    $image = $_FILES['image']['name'];
+    $image_size = $_FILES['image']['size'];
+    $image_tmp_name = $FILES['image']['tmp_name'];
+    $image_folder = 'uploaded_img/'.$image;
+
+    $select = $conn->prepare("SELECT * FROM `users` WHERE email = ?");
+    $select->execute([$email]);
+
+    if($select->rowCount() > 0){
+        $message[] = 'e-mail do usuário já existe!'
+    }else{
+        if($pass != $cpass){
+            $message[] = 'A confirmação da senha tá diferente!'
+        }
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,6 +45,21 @@
     <title>Cadastro & Login</title>
 </head>
 <body>
+
+    <?php
+    
+    if(isset($message)){
+        foreach($message as $message){
+            echo '
+            <div class="message">
+                <span></span>
+                <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+            </div>
+            ';
+        }
+    }
+    
+    ?>
     <section class="form-container">
         <form action="" enctype="multipart/form-data" method="POST">
             <h3>Cadastrar</h3>
@@ -18,7 +67,7 @@
             <input type="email" name="email" class="box" placeholder="Digite seu email" required>
             <input type="password" name="pass" class="box" placeholder="Digite sua senha" required>
             <input type="password" name="cpass" class="box" placeholder="confirme sua senha" required>
-            <input type="file" name="pass" class="box" accept="image/jpg, image/jpeg, image/png" required>
+            <input type="file" name="image" class="box" accept="image/jpg, image/jpeg, image/png" required>
             <input type="submit" value="Cadastrar agora" class="btn" name="submit">
             <p>Já tem uma conta?<a href="login.php"> Fazer login</a></p>
         </form>
