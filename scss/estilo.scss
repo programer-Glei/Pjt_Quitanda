@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
+$--green: #27ae60;
+$--orange: #f39c12;
+$--red: #e74c3c;
+$--black: #333;
+$light-color: #666;
+$--white: #fff;
+$--light-bg: #f6f6f6;
+$border: 0.2rem solid $--black;
+$box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+
+*{
+    font-family: 'Rubik',sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    color: $--black;
+}
+
+*::selection{
+    background-color: $--green;
+    color: $--white;
+}
+
+*::-webkit-scrollbar{
+    height: 0.5rem;
+    width: 1rem;
+}
+
+*::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb{
+    background-color: $--green;
+}
