@@ -78,6 +78,42 @@ section {
   background-color: #f39c12;
 }
 
+.message {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f6f6f6;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1.5rem;
+  z-index: 10000;
+}
+
+.message span {
+  font-size: 2rem;
+  color: #333;
+}
+
+.message i {
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #e74c3c;
+}
+
+.message i:hover {
+  color: #333;
+}
+
 .form-container {
   min-height: 100vh;
   display: -webkit-box;

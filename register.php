@@ -15,17 +15,29 @@ if(isset($_POST['submit'])){
 
     $image = $_FILES['image']['name'];
     $image_size = $_FILES['image']['size'];
-    $image_tmp_name = $FILES['image']['tmp_name'];
+    $image_tmp_name = $_FILES['image']['tmp_name'];
     $image_folder = 'uploaded_img/'.$image;
 
     $select = $conn->prepare("SELECT * FROM `users` WHERE email = ?");
     $select->execute([$email]);
 
     if($select->rowCount() > 0){
-        $message[] = 'e-mail do usuário já existe!'
+        $message[] = 'e-mail do usuário já existe!';
     }else{
         if($pass != $cpass){
-            $message[] = 'A confirmação da senha tá diferente!'
+            $message[] = 'A confirmação da senha tá diferente!';
+        }else{
+            $insert = $conn->prepare("INSERT INTO `users`(name,email,password,image) VALUES(?,?,?,?)");
+            $insert->execute([$name,$email,$pass,$image]);
+            if($insert){
+                if($image_size > 2000000){
+                    $message[] = 'imagem é muito grande!';
+                }else{
+                    move_uploaded_file($image_tmp_name, $image_folder);
+                    $message[] = 'Registrado com sucesso!';
+                    header('location:login.php');
+                }
+            }
         }
     }
 }
@@ -52,7 +64,7 @@ if(isset($_POST['submit'])){
         foreach($message as $message){
             echo '
             <div class="message">
-                <span></span>
+                <span>'.$message.'</span>
                 <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
             </div>
             ';

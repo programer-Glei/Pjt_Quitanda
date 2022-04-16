@@ -81,6 +81,35 @@ section{
     background-color: $--orange;
 }
 
+.message{
+    position: sticky;
+    top: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: $--light-bg;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    z-index: 10000;
+
+    span{
+        font-size: 2rem;
+        color: $--black;
+    }
+
+    i{
+        font-size: 2.5rem;
+        cursor: pointer;
+        color: $--red;
+
+        &:hover{
+            color: $--black;
+        }
+    }
+}
+
 .form-container{
     min-height: 100vh;
     display: flex;

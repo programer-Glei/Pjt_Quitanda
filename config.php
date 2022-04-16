@@ -1,6 +1,6 @@
 <?php
 
-$db_name = "myslq:host=localhost;dbname=shop_db"
+$db_name = "mysql:host=localhost;dbname=shop_db";
 $username = "root";
 $password = "";
 
