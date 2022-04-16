@@ -71,14 +71,14 @@ section {
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   border: 0.2rem solid #333;
+  text-align: center;
   padding: 2rem;
 }
 
 .form-container form h3 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #333;
   margin-bottom: 1rem;
-  text-align: center;
 }
 
 .form-container form .box {
@@ -89,5 +89,20 @@ section {
   padding: 1.2rem 1.4rem;
   font-size: 1.8rem;
   color: #333;
+  background-color: #f6f6f6;
+}
+
+.form-container form p {
+  margin-top: 1.5rem;
+  font-size: 2.2rem;
+  color: #666;
+}
+
+.form-container form p a {
+  color: #27ae60;
+}
+
+.form-container form p a:hover {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=estilo.css.map */

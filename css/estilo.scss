@@ -66,13 +66,13 @@ section{
         border-radius: 0.5rem;
         box-shadow: $box-shadow;
         border: $border;
+        text-align: center;
         padding: 2rem;
 
         h3{
-            font-size: 2.5rem;
+            font-size: 3rem;
             color: $--black;
             margin-bottom: 1rem;
-            text-align: center;
         }
 
         .box{
@@ -83,6 +83,21 @@ section{
             padding: 1.2rem 1.4rem;
             font-size: 1.8rem;
             color: $--black;
+            background-color: $--light-bg;
+        }
+
+        p{
+            margin-top: 1.5rem;
+            font-size: 2.2rem;
+            color: $light-color;
+
+            a{
+                color: $--green;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
         }
     }
 }

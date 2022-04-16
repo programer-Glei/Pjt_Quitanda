@@ -18,8 +18,9 @@
             <input type="email" name="email" class="box" placeholder="Digite seu email" required>
             <input type="password" name="pass" class="box" placeholder="Digite sua senha" required>
             <input type="password" name="cpass" class="box" placeholder="confirme sua senha" required>
-            <input type="file" name="pass" class="image" accept="image/jpg, image/jpeg, image/png" required>
+            <input type="file" name="pass" class="box" accept="image/jpg, image/jpeg, image/png" required>
             <input type="submit" value="Cadastrar agora" class="btn" name="submit">
+            <p>Já tem uma conta?<a href="login.php"> Fazer login</a></p>
         </form>
     </section>
 </body>
