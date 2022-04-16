@@ -54,6 +54,29 @@ section{
     margin: 0 auto;
 }
 
+.btn, .delete-btn, .option-btn{
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    color: $--white;
+    font-size: 2rem;
+    padding: 1.3rem 3rem;
+    cursor: pointer;
+}
+
+.btn{
+    background-color: $--green;
+}
+
+.delete-btn{
+    background-color: $--red;
+}
+
+.option-btn{
+    background-color: $--orange;
+}
+
 .form-container{
     min-height: 100vh;
     display: flex;
