@@ -12,6 +12,7 @@ if(isset($_POST['submit'])){
     $pass = filter_var($pass, FILTER_SANITIZE_STRING);
     $cpass = $_POST['cpass'];
     $cpass = filter_var($cpass, FILTER_SANITIZE_STRING);
+    $user_type = 'user';
 
     $image = $_FILES['image']['name'];
     $image_size = $_FILES['image']['size'];
@@ -27,8 +28,8 @@ if(isset($_POST['submit'])){
         if($pass != $cpass){
             $message[] = 'A confirmação da senha tá diferente!';
         }else{
-            $insert = $conn->prepare("INSERT INTO `users`(name,email,password,image) VALUES(?,?,?,?)");
-            $insert->execute([$name,$email,$pass,$image]);
+            $insert = $conn->prepare("INSERT INTO `users`(name,email,password,user_type,image) VALUES(?,?,?,?,?)");
+            $insert->execute([$name,$email,$pass,$user_type,$image]);
             if($insert){
                 if($image_size > 2000000){
                     $message[] = 'imagem é muito grande!';
