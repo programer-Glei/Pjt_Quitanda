@@ -4,9 +4,9 @@
 
 session_start();
 
-$user_id = $_SESSION['user_id'];
+$admin_id = $_SESSION['admin_id'];
 
-if(!isset($user_id)){
+if(!isset($admin_id)){
     header('location:login.php');
 }
 
@@ -19,10 +19,10 @@ if(!isset($user_id)){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilo.css">
-    <title>Ortifruit Herplim</title>
+    <title>Página de administração</title>
 </head>
 <body>
-    <h1>Ortifruti Herplim</h1>
+    <h1>Página de administração</h1>
     <a href="logout.php">Sair</a>
 </body>
 </html>
