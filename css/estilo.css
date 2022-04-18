@@ -169,6 +169,14 @@ section {
   text-decoration: underline;
 }
 
+.header {
+  background: #fff;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
 /* media queries */
 @media (min-width: 991px) {
   html {

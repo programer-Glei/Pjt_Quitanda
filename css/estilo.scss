@@ -158,6 +158,11 @@ section{
     }
 }
 
+.header{
+    background: $--white;
+    position: sticky;
+    top: 0; left: 0;
+}
 
 /* media queries */
 
