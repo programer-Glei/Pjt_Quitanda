@@ -161,7 +161,18 @@ section{
 .header{
     background: $--white;
     position: sticky;
-    top: 0; left: 0;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+
+    .flex{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem;
+        margin: 0 auto;
+        max-width: 1200px;
+        position: relative;
+    }
 }
 
 /* media queries */
