@@ -173,16 +173,26 @@ section{
         margin: 0 auto;
         max-width: 1200px;
         position: relative;
-    }
 
-    .logo{
-        font-size: 2.5rem;
-        color: $--black;
+        .logo{
+            font-size: 2.5rem;
+            color: $--black;
+    
+            span{
+                color: $--green;
+            }
+        }
 
-        span{
-            color: $--green;
+        .navbar{
+
+            a{
+                margin: 0 1rem;
+                font-size: 2rem;
+                color: $light-color;
+            }
         }
     }
+
 }
 
 /* media queries */

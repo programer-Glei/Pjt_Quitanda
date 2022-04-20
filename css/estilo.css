@@ -197,13 +197,19 @@ section {
   position: relative;
 }
 
-.header .logo {
+.header .flex .logo {
   font-size: 2.5rem;
   color: #333;
 }
 
-.header .logo span {
+.header .flex .logo span {
   color: #27ae60;
+}
+
+.header .flex .navbar a {
+  margin: 0 1rem;
+  font-size: 2rem;
+  color: #666;
 }
 
 /* media queries */
