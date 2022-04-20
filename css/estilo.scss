@@ -110,6 +110,10 @@ section{
     }
 }
 
+#menu-btn {
+    display: none;
+}
+
 .form-container{
     min-height: 100vh;
     display: flex;
@@ -207,19 +211,42 @@ section{
                 color: $--green;
             }
         }
+
     }
 
 }
 
 /* media queries */
 
-@media (min-width: 991px){
+@media (max-width: 991px){
     html{
         font-size: 55%;
     }
 }
 
-@media (min-width: 450px){
+@media (max-width: 768px){
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .header{
+    
+        .flex{
+    
+            .navbar{
+                border-top: $border;
+                border-bottom: $border;
+                background-color: $--white;
+                position: absolute;
+                top: 0; left: 0;
+            }
+    
+        }
+    
+    }
+}
+
+@media (max-width: 450px){
     html{
         font-size: 50%;
     }

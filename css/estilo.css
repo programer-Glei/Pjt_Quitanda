@@ -114,6 +114,10 @@ section {
   color: #333;
 }
 
+#menu-btn {
+  display: none;
+}
+
 .form-container {
   min-height: 100vh;
   display: -webkit-box;
@@ -229,13 +233,27 @@ section {
 }
 
 /* media queries */
-@media (min-width: 991px) {
+@media (max-width: 991px) {
   html {
     font-size: 55%;
   }
 }
 
-@media (min-width: 450px) {
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+  }
+  .header .flex .navbar {
+    border-top: 0.2rem solid #333;
+    border-bottom: 0.2rem solid #333;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media (max-width: 450px) {
   html {
     font-size: 50%;
   }
