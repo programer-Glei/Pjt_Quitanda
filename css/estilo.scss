@@ -227,6 +227,7 @@ section{
 @media (max-width: 768px){
     #menu-btn {
         display: inline-block;
+        transition: 0.2s linear;
     }
 
     .header{
@@ -238,7 +239,18 @@ section{
                 border-bottom: $border;
                 background-color: $--white;
                 position: absolute;
-                top: 0; left: 0;
+                top: 99%; left: 0; right: 0;
+                transition: 0.2s linear;
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+                a{
+                    display: block;
+                    margin: 2rem;
+                }
+
+                &.active{
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                }
             }
     
         }
