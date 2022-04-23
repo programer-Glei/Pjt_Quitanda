@@ -63,6 +63,7 @@ section{
     font-size: 2rem;
     padding: 1.3rem 3rem;
     cursor: pointer;
+    text-align: center;
 
     &:hover{
         background-color: $--black;
@@ -79,6 +80,16 @@ section{
 
 .option-btn{
     background-color: $--orange;
+}
+
+.flex-btn{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.flex-btn > *{
+    flex: 1;
 }
 
 .message{
@@ -261,5 +272,10 @@ section{
 @media (max-width: 450px){
     html{
         font-size: 50%;
+    }
+
+    .flex-btn{
+        flex-flow: column;
+        gap: 0;
     }
 }
