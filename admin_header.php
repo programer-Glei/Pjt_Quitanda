@@ -33,6 +33,9 @@ if(isset($message)){
                 $select_profile->execute([$admin_id]);
                 $fetch_profile = $select_profile->fetch(PDO::FETCH_ASSOC);
             ?>
+            <img src="uploaded_img/<?= $fetch_profile['image']; ?>" alt="">
+            <p><?= $fetch_profile['name']; ?></p>
+            <a href="admin_update_profile.php" class="btn">Atualizar perfil</a>
         </div>
     </div>
 </header>
