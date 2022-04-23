@@ -223,6 +223,32 @@ section{
             }
         }
 
+        .profile{
+            position: absolute;
+            top: 120%; right: 2rem;
+            box-shadow: $box-shadow;
+            border: $border;
+            border-radius: 0.5rem;
+            padding: 2rem;
+            text-align: center;
+            background-color: $--white;
+            width: 33rem;
+
+            img{
+                height: 15rem;
+                width: 15rem;
+                margin-bottom: 1rem;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            p{
+                padding: 0.5rem 0;
+                font-size: 2rem;
+                color: $light-color;
+            }
+        }
+
     }
 
 }

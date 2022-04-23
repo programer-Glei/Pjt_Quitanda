@@ -60,6 +60,7 @@ section {
   font-size: 2rem;
   padding: 1.3rem 3rem;
   cursor: pointer;
+  text-align: center;
 }
 
 .btn:hover, .delete-btn:hover, .option-btn:hover {
@@ -245,6 +246,35 @@ section {
 
 .header .flex .icons > *:hover {
   color: #27ae60;
+}
+
+.header .flex .profile {
+  position: absolute;
+  top: 120%;
+  right: 2rem;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border: 0.2rem solid #333;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  text-align: center;
+  background-color: #fff;
+  width: 33rem;
+}
+
+.header .flex .profile img {
+  height: 15rem;
+  width: 15rem;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.header .flex .profile p {
+  padding: 0.5rem 0;
+  font-size: 2rem;
+  color: #666;
 }
 
 /* media queries */
