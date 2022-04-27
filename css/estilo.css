@@ -260,6 +260,7 @@ section {
   text-align: center;
   background-color: #fff;
   width: 33rem;
+  display: none;
 }
 
 .header .flex .profile img {
