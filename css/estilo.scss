@@ -121,6 +121,12 @@ section{
     }
 }
 
+@keyframes fadeIn{
+    0%{
+        transform: translateY(1rem);
+    }
+}
+
 #menu-btn {
     display: none;
 }
@@ -234,6 +240,11 @@ section{
             background-color: $--white;
             width: 33rem;
             display: none;
+            animation: fadeIn 0.2s linear;
+
+            &.active{
+                display: inline-block;
+            }
 
             img{
                 height: 15rem;

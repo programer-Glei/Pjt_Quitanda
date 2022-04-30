@@ -130,6 +130,20 @@ section {
   color: #333;
 }
 
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: translateY(1rem);
+            transform: translateY(1rem);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    -webkit-transform: translateY(1rem);
+            transform: translateY(1rem);
+  }
+}
+
 #menu-btn {
   display: none;
 }
@@ -261,6 +275,12 @@ section {
   background-color: #fff;
   width: 33rem;
   display: none;
+  -webkit-animation: fadeIn 0.2s linear;
+          animation: fadeIn 0.2s linear;
+}
+
+.header .flex .profile.active {
+  display: inline-block;
 }
 
 .header .flex .profile img {
