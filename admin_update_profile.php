@@ -29,6 +29,20 @@ if(!isset($admin_id)){
 
     <section class="update-profile">
         <h1 class="title">Atualizar perfil</h1>
+
+        <form action="" method="POST" enctype="multipart/form-data">
+            <img src="uploaded_img/<?= $fetch_profile['image']; ?>" alt="">
+            <div class="flex-btn">
+                <div class="inpu-box">
+                    <span>nome do usuário: </span>
+                    <input type="text" name="name" value="<?= $fetch_profile['name'];?>"placeholder="Atualizar usuário" required class="box">
+                    <span>email: </span>
+                    <input type="email" name="email" value="<?= $fetch_profile['email'];?>"placeholder="Atualizar email" required class="box">
+                    <span>atualizar foto: </span>
+                    <input type="text" name="name" value="<?= $fetch_profile['name'];?>"placeholder="Atualizar usuário" required class="box">
+                </div>
+            </div>
+        </form>
     </section>
 
     <script src="java/script.js"></script>

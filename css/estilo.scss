@@ -92,6 +92,14 @@ section{
     flex: 1;
 }
 
+.title{
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: $--black;
+    font-size: 3.5rem;
+}
+
 .message{
     position: sticky;
     top: 0;
@@ -315,5 +323,9 @@ section{
     .flex-btn{
         flex-flow: column;
         gap: 0;
+    }
+
+    .title{
+        font-size: 3rem;
     }
 }
