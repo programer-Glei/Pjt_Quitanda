@@ -39,7 +39,15 @@ if(!isset($admin_id)){
                     <span>email: </span>
                     <input type="email" name="email" value="<?= $fetch_profile['email'];?>"placeholder="Atualizar email" required class="box">
                     <span>atualizar foto: </span>
-                    <input type="text" name="name" value="<?= $fetch_profile['name'];?>"placeholder="Atualizar usuário" required class="box">
+                    <input type="file" name="image" accept="image/jpg, image/jpeg, image/png" required class="box">
+                </div>
+                <div class="inpu-box">
+                    <input type="hidden" name="old_pass" value="<?= $fetch_profile['password']; ?>">
+                    <input type="hidden" name="old_image" value="<?= $fetch_profile['image']; ?>">
+                    <span>Senha antiga: </span>
+                    <input type="password" name="old_pass" placeholder="Digite a senha anterior" required class="box">
+                    <span>Senha Nova: </span>
+                    <input type="password" name="new_pass" placeholder="Digite a senha nova" required class="box">
                 </div>
             </div>
         </form>
