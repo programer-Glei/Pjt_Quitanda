@@ -273,8 +273,38 @@ section{
 
 }
 
-/* media queries */
+/* ATUALIZAR PERFIL */
+.update-profile{
+    form{
+        max-width: 70rem;
+        margin: 0 auto;
+        background-color: $--white;
+        box-shadow: $box-shadow;
+        border: $border;
+        border-radius: 0.5rem;
+        padding: 2rem;
+        text-align: center;
 
+        img{
+            height: 20rem;
+            width: 20rem;
+            margin-bottom: 1rem;
+            border-radius: 50%;
+        }
+
+        .inpu-box{
+            span{
+                display: block;
+                padding-top: 1rem;
+                font-size: 1.8rem;
+                color: $light-color;
+            }
+        }
+    }
+}
+
+
+/* media queries */
 @media (max-width: 991px){
     html{
         font-size: 55%;

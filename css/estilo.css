@@ -306,6 +306,33 @@ section {
   color: #666;
 }
 
+/* ATUALIZAR PERFIL */
+.update-profile form {
+  max-width: 70rem;
+  margin: 0 auto;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border: 0.2rem solid #333;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.update-profile form img {
+  height: 20rem;
+  width: 20rem;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+}
+
+.update-profile form .inpu-box span {
+  display: block;
+  padding-top: 1rem;
+  font-size: 1.8rem;
+  color: #666;
+}
+
 /* media queries */
 @media (max-width: 991px) {
   html {
@@ -352,6 +379,9 @@ section {
         -ms-flex-flow: column;
             flex-flow: column;
     gap: 0;
+  }
+  .title {
+    font-size: 3rem;
   }
 }
 /*# sourceMappingURL=estilo.css.map */
