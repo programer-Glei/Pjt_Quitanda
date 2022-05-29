@@ -22,7 +22,6 @@ if(!isset($user_id)){
     <title>Ortifruit Herplim</title>
 </head>
 <body>
-    <h1>Ortifruti Herplim</h1>
-    <a href="logout.php">Sair</a>
+    <?php include 'header.php'; ?>
 </body>
 </html>

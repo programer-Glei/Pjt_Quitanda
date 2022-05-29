@@ -40,6 +40,24 @@ if(isset($_POST['update_profile'])){
     };
 
     $old_pass = $_POST['old_pass'];
+    $update_pass = $_POST['update_pass'];
+    $update_pass = filter_var($update_pass, FILTER_SANITIZE_STRING);
+    $new_pass = $_POST['new_pass'];
+    $new_pass = filter_var($new_pass, FILTER_SANITIZE_STRING);
+    $confirm_pass = $_POST['conf_pass'];
+    $confirm_pass = filter_var($confirm_pass, FILTER_SANITIZE_STRING);
+
+    if(!empty($update_pass) AND !empty($new_pass) AND !empty($confirm_pass)){
+        if($old_pass != $update_pass){
+            $message[] = 'senha antiga não corresponde';
+        }elseif($new_pass != $confirm_pass){
+            $message[] = 'confirmação diferente de nova senha';
+        }else{
+            $update_pass_query = $conn->prepare("UPDATE `users` SET password = ? WHERE id = ?");
+            $update_pass_query->execute([$confirm_pass, $admin_id]);
+            $message[] = 'atualização de senha com sucesso';
+        }
+    }
 }
 
 ?>
