@@ -21,7 +21,7 @@ if(!isset($user_id)){
     <link rel="stylesheet" href="css/estilo.css">
     <!-- font awesome cdn link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <title>Ortifruit Herplim</title>
+    <title>Revisar dados</title>
 </head>
 <body>
     <?php include 'header.php'; ?>
@@ -29,3 +29,7 @@ if(!isset($user_id)){
     <script src="java/script.js"></script>
 </body>
 </html>
+
+
+
+

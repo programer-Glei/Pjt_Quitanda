@@ -4,9 +4,9 @@
 
 session_start();
 
-$user_id = $_SESSION['user_id'];
+$admin_id = $_SESSION['admin_id'];
 
-if(!isset($user_id)){
+if(!isset($admin_id)){
     header('location:login.php');
 }
 
@@ -19,13 +19,15 @@ if(!isset($user_id)){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilo.css">
+
     <!-- font awesome cdn link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <title>Ortifruit Herplim</title>
+    <title>Produtos</title>
 </head>
 <body>
-    <?php include 'header.php'; ?>
-    <?php include 'footer.php'; ?>
+    <?php include 'admin_header.php'; ?>
+
     <script src="java/script.js"></script>
 </body>
 </html>
+

@@ -35,7 +35,7 @@ if(isset($message)){
             ?>
             <img src="uploaded_img/<?= $fetch_profile['image']; ?>" alt="">
             <p><?= $fetch_profile['name']; ?></p>
-            <a href="admin_update_profile.php" class="btn">Atualizar perfil</a>
+            <a href="user_profile_update.php" class="btn">Atualizar perfil</a>
             <a href="logout.php" class="delete-btn">Sair</a>
             <div class="flex-btn">
                 <a href="login.php" class="option-btn">Entrar</a>

@@ -10,6 +10,12 @@ $--light-bg: #f6f6f6;
 $border: 0.2rem solid $--black;
 $box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 
+@mixin grid($val) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap: 1.5rem;
+}
+
 *{
     font-family: 'Rubik',sans-serif;
     margin: 0; padding: 0;
@@ -325,6 +331,22 @@ section{
     }
 }
 
+/* footer - rodapé */
+.footer{
+    background-color: $--white;
+
+    .box-container{
+        @include grid(27rem);
+
+        .box{
+            h3{
+                color: $--black;
+                margin-bottom: 1rem;
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
 
 /* media queries */
 @media (max-width: 991px){
@@ -372,7 +394,7 @@ section{
             .flex-btn{
                 flex-wrap: wrap;
                 gap: 0;
-                
+
                 .inpu-box{
                     width: 100%;
                 }
