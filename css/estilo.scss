@@ -290,14 +290,36 @@ section{
             width: 20rem;
             margin-bottom: 1rem;
             border-radius: 50%;
+            object-fit: cover;
         }
 
-        .inpu-box{
-            span{
-                display: block;
-                padding-top: 1rem;
-                font-size: 1.8rem;
-                color: $light-color;
+        .flex-btn{
+            display: flex;
+            gap: 1.5rem;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .inpu-box{
+                text-align: left;
+                width: 49%;
+
+                span{
+                    display: block;
+                    padding-top: 1rem;
+                    font-size: 1.8rem;
+                    color: $light-color;
+                }
+    
+                .box{
+                    width: 100%;
+                    padding: 1.2rem 1.4rem;
+                    font-size: 1.8rem;
+                    color: $--black;
+                    border: $border;
+                    border-radius: 0.5rem;
+                    margin: 1rem 0;
+                    background-color: $--light-bg;
+                }
             }
         }
     }
@@ -342,6 +364,20 @@ section{
     
         }
     
+    }
+
+    .update-profile{
+        form{
+    
+            .flex-btn{
+                flex-wrap: wrap;
+                gap: 0;
+                
+                .inpu-box{
+                    width: 100%;
+                }
+            }
+        }
     }
 }
 

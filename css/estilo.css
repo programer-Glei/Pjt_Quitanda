@@ -324,13 +324,43 @@ section {
   width: 20rem;
   margin-bottom: 1rem;
   border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.update-profile form .inpu-box span {
+.update-profile form .flex-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.update-profile form .flex-btn .inpu-box {
+  text-align: left;
+  width: 49%;
+}
+
+.update-profile form .flex-btn .inpu-box span {
   display: block;
   padding-top: 1rem;
   font-size: 1.8rem;
   color: #666;
+}
+
+.update-profile form .flex-btn .inpu-box .box {
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  font-size: 1.8rem;
+  color: #333;
+  border: 0.2rem solid #333;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  background-color: #f6f6f6;
 }
 
 /* media queries */
@@ -366,6 +396,14 @@ section {
   .header .flex .navbar.active {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .update-profile form .flex-btn {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 0;
+  }
+  .update-profile form .flex-btn .inpu-box {
+    width: 100%;
   }
 }
 
