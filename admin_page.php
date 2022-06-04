@@ -40,7 +40,7 @@ if(!isset($admin_id)){
                 ?>
                 <h3><?= $total_pendings; ?></h3>
                 <p>Total pendentes</p>
-                <a href="admin_orders.php">ver pedidos</a>
+                <a href="admin_orders.php" class="btn">ver pedidos</a>
             </div>
             <div class="box">
                 <?php
@@ -53,7 +53,17 @@ if(!isset($admin_id)){
                 ?>
                 <h3><?= $total_pendings; ?></h3>
                 <p>Pedidos concluídos</p>
-                <a href="admin_orders.php">ver pedidos</a>
+                <a href="admin_orders.php" class="btn">ver pedidos</a>
+            </div>
+            <div class="box">
+                <?php
+                    $select_orders = $conn->prepare("SELECT * FROM `orders`");
+                    $select_orders->execute();
+                    $number_of_orders = $select_orders->rowCount();
+                ?>
+                <h3><?= $number_of_orders; ?></h3>
+                <p>Pedidos feitos</p>
+                <a href="admin_orders.php" class="btn">ver produtos</a>
             </div>
             <div class="box">
                 <?php
@@ -63,17 +73,47 @@ if(!isset($admin_id)){
                 ?>
                 <h3><?= $number_of_products; ?></h3>
                 <p>Produtos adicionados</p>
-                <a href="admin_products.php">ver produtos</a>
+                <a href="admin_products.php" class="btn">ver produtos</a>
             </div>
             <div class="box">
                 <?php
-                    $select_products = $conn->prepare("SELECT * FROM `products`");
-                    $select_products->execute();
-                    $number_of_products = $select_products->rowCount();
+                    $select_accounts = $conn->prepare("SELECT * FROM `users`");
+                    $select_accounts->execute();
+                    $number_of_accounts = $select_accounts->rowCount();
                 ?>
-                <h3><?= $number_of_products; ?></h3>
-                <p>Produtos adicionados</p>
-                <a href="admin_products.php">ver produtos</a>
+                <h3><?= $number_of_accounts; ?></h3>
+                <p>Contas totais</p>
+                <a href="admin_uders.php" class="btn">Total contas</a>
+            </div>
+            <div class="box">
+                <?php
+                    $select_users = $conn->prepare("SELECT * FROM `users` WHERE user_type = ?");
+                    $select_users->execute(['user']);
+                    $number_of_users = $select_users->rowCount();
+                ?>
+                <h3><?= $number_of_users; ?></h3>
+                <p>Toatl usuarios</p>
+                <a href="admin_uders.php" class="btn">Total contas</a>
+            </div>
+            <div class="box">
+                <?php
+                    $select_admins = $conn->prepare("SELECT * FROM `users` WHERE user_type = ?");
+                    $select_admins->execute(['admin']);
+                    $number_of_admins = $select_admins->rowCount();
+                ?>
+                <h3><?= $number_of_admins; ?></h3>
+                <p>Toatl administrador</p>
+                <a href="admin_users.php" class="btn">Total contas</a>
+            </div>
+            <div class="box">
+                <?php
+                    $select_messages = $conn->prepare("SELECT * FROM `message`");
+                    $select_messages->execute();
+                    $number_of_messages = $select_messages->rowCount();
+                ?>
+                <h3><?= $number_of_messages; ?></h3>
+                <p>Total mensagens</p>
+                <a href="admin_uders.php" class="btn">Ver menssagens</a>
             </div>
         </div>
     </section>

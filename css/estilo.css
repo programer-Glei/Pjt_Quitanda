@@ -364,6 +364,43 @@ section {
   background-color: #f6f6f6;
 }
 
+/* dashboard */
+.dashboard .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(27rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  gap: 2.5rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.dashboard .box-container .box {
+  padding: 1.5rem;
+  text-align: center;
+  border: 0.2rem solid #333;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+
+.dashboard .box-container .box h3 {
+  font-size: 3.5rem;
+  color: #333;
+}
+
+.dashboard .box-container .box p {
+  font-size: 2rem;
+  background-color: #f6f6f6;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  border: 0.2rem solid #333;
+  color: #333;
+}
+
 /* footer - rodapé */
 .footer {
   background-color: #fff;

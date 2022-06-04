@@ -332,6 +332,37 @@ section{
     }
 }
 
+/* dashboard */
+.dashboard{
+    .box-container{
+        @include grid(27rem);
+
+        .box{
+            padding: 1.5rem;
+            text-align: center;
+            border: $border;
+            box-shadow: $box-shadow;
+            background-color: $--white;
+            border-radius: 0.5rem;
+
+            h3{
+                font-size: 3.5rem;
+                color: $--black;
+            }
+
+            p{
+                font-size: 2rem;
+                background-color: $--light-bg;
+                padding: 1.5rem;
+                margin: 1rem 0;
+                border-radius: 0.5rem;
+                border: $border;
+                color: $--black;
+            }
+        }
+    }
+}
+
 /* footer - rodapé */
 .footer{
     background-color: $--white;
