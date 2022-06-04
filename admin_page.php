@@ -26,6 +26,57 @@ if(!isset($admin_id)){
 </head>
 <body>
     <?php include 'admin_header.php'; ?>
+    <section class="dashboard">
+        <h1 class="title">Painel de controle</h1>
+        <div class="box-container">
+            <div class="box">
+                <?php
+                    $total_pendings = 0;
+                    $select_pendings = $conn->prepare("SELECT * FROM `orders` WHERE payment_status = ?");
+                    $select_pendings->execute(['pending']);
+                    while($fetch_pending = $select_pendings->fetch(PDO::FETCH_ASSOC)){
+                        $total_pendings += $fetch_pending['total_price'];
+                    };
+                ?>
+                <h3><?= $total_pendings; ?></h3>
+                <p>Total pendentes</p>
+                <a href="admin_orders.php">ver pedidos</a>
+            </div>
+            <div class="box">
+                <?php
+                    $total_completed = 0;
+                    $select_completed = $conn->prepare("SELECT * FROM `orders` WHERE payment_status = ?");
+                    $select_completed->execute(['completed']);
+                    while($fetch_completed = $select_completed->fetch(PDO::FETCH_ASSOC)){
+                        $total_completed += $fetch_completed['total_price'];
+                    };
+                ?>
+                <h3><?= $total_pendings; ?></h3>
+                <p>Pedidos concluídos</p>
+                <a href="admin_orders.php">ver pedidos</a>
+            </div>
+            <div class="box">
+                <?php
+                    $select_products = $conn->prepare("SELECT * FROM `products`");
+                    $select_products->execute();
+                    $number_of_products = $select_products->rowCount();
+                ?>
+                <h3><?= $number_of_products; ?></h3>
+                <p>Produtos adicionados</p>
+                <a href="admin_products.php">ver produtos</a>
+            </div>
+            <div class="box">
+                <?php
+                    $select_products = $conn->prepare("SELECT * FROM `products`");
+                    $select_products->execute();
+                    $number_of_products = $select_products->rowCount();
+                ?>
+                <h3><?= $number_of_products; ?></h3>
+                <p>Produtos adicionados</p>
+                <a href="admin_products.php">ver produtos</a>
+            </div>
+        </div>
+    </section>
 
     <script src="java/script.js"></script>
 </body>
