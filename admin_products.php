@@ -26,6 +26,26 @@ if(!isset($admin_id)){
 </head>
 <body>
     <?php include 'admin_header.php'; ?>
+    <section class="add-products">
+        <h1>Adicionar novo produto</h1>
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="flex">
+                <div class="inputbox">
+                    <input type="text" name="name" class="box" required placeholder="Nome do Produto">
+                    <select name="category" class="box" required>
+                        <option value="" selected disabled>Selecione a Categoria</option>
+                        <option value="vegitbales">Vegetais</option>
+                        <option value="fruits">Frutas</option>
+                        <option value="meat">Carne</option>
+                        <option value="fish">Peixe</option>
+                    </select>
+                </div>
+                <div class="inpubox">
+                    
+                </div>
+            </div>
+        </form>
+    </section>
 
     <script src="java/script.js"></script>
 </body>
