@@ -41,9 +41,12 @@ if(!isset($admin_id)){
                     </select>
                 </div>
                 <div class="inpubox">
-                    
+                    <input type="number" min="0" name="price" class="box" required placeholder="Insira o preço do produto">
+                    <input type="file" class="box" required accept="image/jpg, image/jpeg, image/png">
                 </div>
             </div>
+            <textarea name="details" cols="30" rows="10" class="box" placeholder="Insira os detalhes do produto"></textarea>
+            <input type="sumit" class="btn" value="Adicionar produto" name="add_product">
         </form>
     </section>
 

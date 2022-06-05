@@ -363,6 +363,26 @@ section{
     }
 }
 
+/* add-products */
+.add-products{
+    form{
+        max-width: 70rem;
+        padding: 2rem;
+        margin: 0 auto;
+        text-align: center;
+        border: $border;
+        box-shadow: $box-shadow;
+        background-color: $--white;
+        border-radius: 0.5rem;
+
+        .flex{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+}
+
 /* footer - rodapé */
 .footer{
     background-color: $--white;
