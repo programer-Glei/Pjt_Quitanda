@@ -379,6 +379,21 @@ section{
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+
+            .inputbox{
+                width: 49%;
+            }
+        }
+
+        .box{
+            width: 100%;
+            margin: 1rem auto;
+            padding: 1.2rem 1.4rem;
+            font-size: 1.8rem;
+            color: $--black;
+            border-radius: 0.5rem;
+            background-color: $--light-bg;
+            border: $border;
         }
     }
 }

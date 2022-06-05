@@ -425,6 +425,21 @@ section {
       flex-wrap: wrap;
 }
 
+.add-products form .flex .inputbox {
+  width: 49%;
+}
+
+.add-products form .box {
+  width: 100%;
+  margin: 1rem auto;
+  padding: 1.2rem 1.4rem;
+  font-size: 1.8rem;
+  color: #333;
+  border-radius: 0.5rem;
+  background-color: #f6f6f6;
+  border: 0.2rem solid #333;
+}
+
 /* footer - rodapé */
 .footer {
   background-color: #fff;
