@@ -395,6 +395,11 @@ section{
             background-color: $--light-bg;
             border: $border;
         }
+
+        textarea{
+            height: 20rem;
+            resize: none;
+        }
     }
 }
 
@@ -484,6 +489,10 @@ section{
                 }
             }
         }
+    }
+
+    .add-products form .flex .inputbox{
+        width: 100%;
     }
 }
 
