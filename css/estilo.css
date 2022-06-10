@@ -431,13 +431,18 @@ section {
 
 .add-products form .box {
   width: 100%;
-  margin: 1rem auto;
+  margin: 1rem 0;
   padding: 1.2rem 1.4rem;
   font-size: 1.8rem;
   color: #333;
   border-radius: 0.5rem;
   background-color: #f6f6f6;
   border: 0.2rem solid #333;
+}
+
+.add-products form textarea {
+  height: 20rem;
+  resize: none;
 }
 
 /* footer - rodapé */
@@ -519,6 +524,9 @@ section {
     gap: 0;
   }
   .update-profile form .flex-btn .inpu-box {
+    width: 100%;
+  }
+  .add-products form .flex .inputbox {
     width: 100%;
   }
 }

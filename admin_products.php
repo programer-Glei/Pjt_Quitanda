@@ -8,6 +8,10 @@ $admin_id = $_SESSION['admin_id'];
 
 if(!isset($admin_id)){
     header('location:login.php');
+};
+
+if(isset($_POST['add_product'])){
+    $name = $_POST['name']
 }
 
 ?>
@@ -27,7 +31,7 @@ if(!isset($admin_id)){
 <body>
     <?php include 'admin_header.php'; ?>
     <section class="add-products">
-        <h1>Adicionar novo produto</h1>
+        <h1 class="title">Adicionar novo produto</h1>
         <form action="" method="post" enctype="multipart/form-data">
             <div class="flex">
                 <div class="inputbox">
@@ -40,7 +44,7 @@ if(!isset($admin_id)){
                         <option value="fish">Peixe</option>
                     </select>
                 </div>
-                <div class="inpubox">
+                <div class="inputbox">
                     <input type="number" min="0" name="price" class="box" required placeholder="Insira o preço do produto">
                     <input type="file" class="box" required accept="image/jpg, image/jpeg, image/png">
                 </div>

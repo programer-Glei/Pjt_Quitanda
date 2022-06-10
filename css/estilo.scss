@@ -387,7 +387,7 @@ section{
 
         .box{
             width: 100%;
-            margin: 1rem auto;
+            margin: 1rem 0;
             padding: 1.2rem 1.4rem;
             font-size: 1.8rem;
             color: $--black;
@@ -491,8 +491,16 @@ section{
         }
     }
 
-    .add-products form .flex .inputbox{
-        width: 100%;
+    .add-products{
+        form{
+    
+            .flex{
+                .inputbox{
+                    width: 100%;
+                }
+            }
+    
+        }
     }
 }
 
