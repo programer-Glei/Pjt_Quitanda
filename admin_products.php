@@ -12,6 +12,17 @@ if(!isset($admin_id)){
 
 if(isset($_POST['add_product'])){
     $name = $_POST['name']
+    $name = filter_var($name, FILTER_SANITIZE);
+    $price = $_POST['price']
+    $price = filter_var($price, FILTER_SANITIZE);
+    $details = $_POST['details']
+    $details = filter_var($details, FILTER_SANITIZE);
+
+    $image = $_FILES['image']['name'];
+    $image = filter_var($image, FILTER_SANITIZE);
+    $image_size = $_FILES['image']['size'];
+    $image_tmp_name = $_FILES['image']['tmp_name'];
+    $image_folder = 'uploaded_img/'.$image;
 }
 
 ?>
