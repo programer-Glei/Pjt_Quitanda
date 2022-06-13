@@ -13,6 +13,8 @@ if(!isset($admin_id)){
 if(isset($_POST['add_product'])){
     $name = $_POST['name']
     $name = filter_var($name, FILTER_SANITIZE);
+    $category = $_POST['category']
+    $category = filter_var($category, FILTER_SANITIZE);
     $price = $_POST['price']
     $price = filter_var($price, FILTER_SANITIZE);
     $details = $_POST['details']
@@ -23,6 +25,24 @@ if(isset($_POST['add_product'])){
     $image_size = $_FILES['image']['size'];
     $image_tmp_name = $_FILES['image']['tmp_name'];
     $image_folder = 'uploaded_img/'.$image;
+
+    $select_products = $conn->prepare("SELECT * FROM `products` WEHERE name = ?");
+    $select_products->execute([$name]);
+
+    if($select_products->rowCount() > 0){
+        $message[] = 'nome do produto já adicionado';
+    }else{
+        $insert_products = $conn->prepare("INSERT INTO `products`(name,category,details,price,image) VALUES(?,?,?,?,?)");
+        $insert_products->execute([$name,$category,$details,$price,$image]);
+
+        if($insert_products){
+            if($image_size > 2000000){
+                $message[] = 'Imagem muito grande';
+            }else{
+                move_uploaded_file($image_tmp_name, $image_folder);
+            }
+        }
+    }
 }
 
 ?>
