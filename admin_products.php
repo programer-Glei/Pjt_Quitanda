@@ -11,17 +11,17 @@ if(!isset($admin_id)){
 };
 
 if(isset($_POST['add_product'])){
-    $name = $_POST['name']
-    $name = filter_var($name, FILTER_SANITIZE);
-    $category = $_POST['category']
-    $category = filter_var($category, FILTER_SANITIZE);
-    $price = $_POST['price']
-    $price = filter_var($price, FILTER_SANITIZE);
-    $details = $_POST['details']
-    $details = filter_var($details, FILTER_SANITIZE);
+    $name = $_POST['name'];
+    $name = filter_var($name, FILTER_SANITIZE_STRING);
+    $category = $_POST['category'];
+    $category = filter_var($category, FILTER_SANITIZE_STRING);
+    $price = $_POST['price'];
+    $price = filter_var($price, FILTER_SANITIZE_STRING);
+    $details = $_POST['details'];
+    $details = filter_var($details, FILTER_SANITIZE_STRING);
 
     $image = $_FILES['image']['name'];
-    $image = filter_var($image, FILTER_SANITIZE);
+    $image = filter_var($image, FILTER_SANITIZE_STRING);
     $image_size = $_FILES['image']['size'];
     $image_tmp_name = $_FILES['image']['tmp_name'];
     $image_folder = 'uploaded_img/'.$image;
@@ -40,6 +40,7 @@ if(isset($_POST['add_product'])){
                 $message[] = 'Imagem muito grande';
             }else{
                 move_uploaded_file($image_tmp_name, $image_folder);
+                $message[] = 'Novo produto adicionado!';
             }
         }
     }
@@ -63,7 +64,7 @@ if(isset($_POST['add_product'])){
     <?php include 'admin_header.php'; ?>
     <section class="add-products">
         <h1 class="title">Adicionar novo produto</h1>
-        <form action="" method="post" enctype="multipart/form-data">
+        <form action="" method="POST" enctype="multipart/form-data">
             <div class="flex">
                 <div class="inputbox">
                     <input type="text" name="name" class="box" required placeholder="Nome do Produto">
@@ -77,14 +78,27 @@ if(isset($_POST['add_product'])){
                 </div>
                 <div class="inputbox">
                     <input type="number" min="0" name="price" class="box" required placeholder="Insira o preço do produto">
-                    <input type="file" class="box" required accept="image/jpg, image/jpeg, image/png">
+                    <input type="file" name="image" class="box" required accept="image/jpg, image/jpeg, image/png">
                 </div>
             </div>
             <textarea name="details" cols="30" rows="10" class="box" placeholder="Insira os detalhes do produto"></textarea>
-            <input type="sumit" class="btn" value="Adicionar produto" name="add_product">
+            <input type="submit" class="btn" value="Adicionar produto" name="add_product">
         </form>
     </section>
+    <section class="show-products">
+        <h1 class="title">Produtos adicionados</h1>
+        <div class="box-container">
+            <?php
+                $show_products = $conn->prepare("SELECT * FROM `products`");
+                $show_products->execute();
+                if($show_products->rowCount() > 0){
 
+                }else{
+                    echo '<p class="empty">Produtos recentes</p>';
+                }
+            ?>
+        </div>
+    </section>
     <script src="java/script.js"></script>
 </body>
 </html>
