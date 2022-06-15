@@ -44,6 +44,7 @@ if(isset($_POST['add_product'])){
             }
         }
     }
+
 }
 
 ?>
@@ -92,7 +93,14 @@ if(isset($_POST['add_product'])){
                 $show_products = $conn->prepare("SELECT * FROM `products`");
                 $show_products->execute();
                 if($show_products->rowCount() > 0){
-
+                    while($fetch_products = $show_products->fetch(PDO::FETCH_ASSOC)){
+            ?>
+            <div class="box">
+                <div class="price">$<?= $fetch_products['price'];?></div>
+                <img src="uploaded_img/<?= $fetch_products['image']; ?>" alt="">
+            </div>
+            <?php
+                 }
                 }else{
                     echo '<p class="empty">Produtos recentes</p>';
                 }
