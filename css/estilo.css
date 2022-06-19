@@ -502,6 +502,27 @@ section {
   color: #666;
 }
 
+/* update-products*/
+.update-products form {
+  max-width: 50rem;
+  padding: 2rem;
+  margin: 0 auto;
+  text-align: center;
+  border: 0.2rem solid #333;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+
+.update-products form img {
+  height: 25rem;
+  width: 25rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 1rem;
+}
+
 /* footer - rodapé */
 .footer {
   background-color: #fff;

@@ -453,6 +453,27 @@ section{
     }
 }
 
+/* update-products*/
+.update-products{
+    form{
+        max-width: 50rem;
+        padding: 2rem;
+        margin: 0 auto;
+        text-align: center;
+        border: $border;
+        box-shadow: $box-shadow;
+        background-color: $--white;
+        border-radius: 0.5rem;
+
+        img{
+            height: 25rem;
+            width: 25rem;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
 /* footer - rodapé */
 .footer{
     background-color: $--white;
