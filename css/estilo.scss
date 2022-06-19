@@ -403,6 +403,23 @@ section{
     }
 }
 
+/* show-products */
+.show-products{
+    .box-container{
+        @include grid(33rem);
+
+        .box{
+            text-align: center;
+            border: $border;
+            box-shadow: $box-shadow;
+            background-color: $--white;
+            border-radius: 0.5rem;
+            padding: 2rem;
+            position: relative;
+        }
+    }
+}
+
 /* footer - rodapé */
 .footer{
     background-color: $--white;
