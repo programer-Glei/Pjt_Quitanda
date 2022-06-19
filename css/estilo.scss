@@ -471,6 +471,18 @@ section{
             object-fit: cover;
             margin-bottom: 1rem;
         }
+
+        .box{
+            width: 100%;
+            border: $border;
+            box-shadow: $box-shadow;
+            background-color: $--light-bg;
+            border-radius: 0.5rem;
+            padding: 1.2rem 1.4rem;
+            font-size: 1.8rem;
+            color: $--black;
+            margin: 1rem 0;
+        }
     }
 }
 

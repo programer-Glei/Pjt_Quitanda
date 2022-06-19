@@ -51,6 +51,10 @@ if(!isset($admin_id)){
             </select>
             <textarea name="details" required class="box" placeholder="Descrição do produto" cols="30" rows="10"><?= $fetch_products['details']; ?></textarea>
             <input type="file" name="image" class="box" accept="image/jpg, image/jpeg, image/png">
+            <div class="flex-btn">
+                <input type="submit" class="btn" value="Atualizar produto" name="update_product">
+                <a href="admin_products.php" class="option-btn">Voltar <</a>
+            </div>
         </form>
         <?php
              }
