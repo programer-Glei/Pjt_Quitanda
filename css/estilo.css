@@ -468,6 +468,40 @@ section {
   position: relative;
 }
 
+.show-products .box-container .box .price {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 1rem;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #e74c3c;
+  border-radius: 0.5rem;
+}
+
+.show-products .box-container .box img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.show-products .box-container .box .name {
+  margin: 0.5rem 0;
+  font-size: 2rem;
+  color: #333;
+}
+
+.show-products .box-container .box .cat {
+  font-size: 1.8rem;
+  color: #27ae60;
+}
+
+.show-products .box-container .box .details {
+  padding-top: 1rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #666;
+}
+
 /* footer - rodapé */
 .footer {
   background-color: #fff;

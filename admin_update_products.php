@@ -27,6 +27,21 @@ if(!isset($admin_id)){
 <body>
     <?php include 'admin_header.php'; ?>
 
+    <div class="update-products">
+        <p class="empty">nenhum produto encontrado!</p>
+
+        <?php
+            $update_id = $_GET['update'];
+            $select_products = $conn->prepare("SELECT * FROM `products` WHERE id = ?");
+            $select_products->execute([$update_id]);
+            if($select_products->rowCount() > 0){
+
+            }else{
+                
+            }
+        ?>
+    </div>
+
     <script src="java/script.js"></script>
 </body>
 </html>

@@ -416,6 +416,39 @@ section{
             border-radius: 0.5rem;
             padding: 2rem;
             position: relative;
+
+            .price{
+                position: absolute;
+                top: 1rem; left: 1rem;
+                padding: 1rem;
+                font-size: 2rem;
+                color: $--white;
+                background-color: $--red;
+                border-radius: 0.5rem;
+            }
+
+            img{
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+
+            .name{
+                margin: 0.5rem 0;
+                font-size: 2rem;
+                color: $--black;
+            }
+
+            .cat{
+                font-size: 1.8rem;
+                color: $--green;
+            }
+
+            .details{
+                padding-top: 1rem;
+                font-size: 1.5rem;
+                line-height: 1.5;
+                color: $light-color;
+            }
         }
     }
 }
