@@ -26,6 +26,29 @@ if(isset($_POST['update_product'])){
     $image_size = $_FILES['image']['size'];
     $image_tmp_name = $_FILES['image']['tmp_name'];
     $image_folder = 'uploaded_img/'.$image;
+    $old_image = $_POST['old_image'];
+
+    $update_product = $conn->prepare("UPDATE `products` SET name = ?, category = ?, price = ?, details = ? WHERE id = ?");
+
+    $update_product->execute([$name,$category,$details,$price,$pid]);
+
+    $message[] = 'produto atualizado com sucesso!';
+
+    if(!empty($image)){
+        if($image_size > 2000000){
+            $message[] = 'imagem muito grande!';
+        }else{
+
+            $update_image = $conn->prepare("UPDATE `products` SET image = ? WHERE id = ?");
+            $update_image->execute([$image,$pid]);
+
+            if($update_image){
+                move_uploaded_file($image_tmp_name, $image_folder);
+                unlink('uploaded_img/'.$old_image);
+                $message[] = 'imagem atualizada com sucesso!';
+            }
+        }
+    }
 }
 
 ?>
@@ -57,8 +80,8 @@ if(isset($_POST['update_product'])){
                 while($fetch_products = $select_products->fetch(PDO::FETCH_ASSOC)){
         ?>
         <form action="" method="POST" enctype="multipart/form-data">
-            <input type="hidden" class="old_image" value="<?= $fetch_products['image']; ?>">
-            <input type="hidden" class="pid" value="<?= $fetch_products['id']; ?>">
+            <input type="hidden" name="old_image" value="<?= $fetch_products['image']; ?>">
+            <input type="hidden" name="pid" value="<?= $fetch_products['id']; ?>">
             <img src="uploaded_img/<?= $fetch_products['image']; ?>" alt="">
             <input type="text" name="name" placeholder="Digitar nome" required class="box" value="<?= $fetch_products['name']; ?>">
             <input type="number" name="price" placeholder="Digitar preço" required class="box" value="<?= $fetch_products['price']; ?>">

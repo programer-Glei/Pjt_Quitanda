@@ -141,6 +141,14 @@ section {
 
 .empty {
   padding: 1.5rem;
+  background: #fff;
+  color: #e74c3c;
+  border-radius: 0.5rem;
+  border: 0.2rem solid #333;
+  font-size: 2rem;
+  text-align: center;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 @-webkit-keyframes fadeIn {
@@ -450,6 +458,10 @@ section {
 }
 
 /* show-products */
+.show-products {
+  padding-top: 0;
+}
+
 .show-products .box-container {
   display: -ms-grid;
   display: grid;
@@ -521,7 +533,6 @@ section {
 
 .update-products form img {
   height: 25rem;
-  width: 25rem;
   -o-object-fit: cover;
      object-fit: cover;
   margin-bottom: 1rem;
@@ -639,6 +650,14 @@ section {
   }
   .title {
     font-size: 3rem;
+  }
+  .show-products .box-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .update-products form img {
+    height: auto;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=estilo.css.map */

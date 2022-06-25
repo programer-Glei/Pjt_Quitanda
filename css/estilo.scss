@@ -416,6 +416,7 @@ section{
 
 /* show-products */
 .show-products{
+    padding-top: 0;
     .box-container{
         @include grid(33rem);
 
@@ -478,7 +479,6 @@ section{
 
         img{
             height: 25rem;
-            width: 25rem;
             object-fit: cover;
             margin-bottom: 1rem;
         }
@@ -611,4 +611,23 @@ section{
     .title{
         font-size: 3rem;
     }
+
+    .show-products{
+        .box-container{
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .update-products{
+        form{
+    
+            img{
+                height: auto;
+                width: 100%;
+            }
+    
+        }
+    }
+    
+    
 }
