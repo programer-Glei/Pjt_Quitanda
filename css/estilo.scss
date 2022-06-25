@@ -136,6 +136,17 @@ section{
     }
 }
 
+.empty{
+    padding: 1.5rem;
+    background: $--white;
+    color: $--red;
+    border-radius: 0.5rem;
+    border: $border;
+    font-size: 2rem;
+    text-align: center;
+    box-shadow: $box-shadow;
+}
+
 @keyframes fadeIn{
     0%{
         transform: translateY(1rem);

@@ -139,6 +139,10 @@ section {
   color: #333;
 }
 
+.empty {
+  padding: 1.5rem;
+}
+
 @-webkit-keyframes fadeIn {
   0% {
     -webkit-transform: translateY(1rem);

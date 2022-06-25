@@ -10,6 +10,24 @@ if(!isset($admin_id)){
     header('location:login.php');
 }
 
+if(isset($_POST['update_product'])){
+    $pid = $_POST['pid'];
+    $name = $_POST['name'];
+    $name = filter_var($name, FILTER_SANITIZE_STRING);
+    $category = $_POST['category'];
+    $category = filter_var($category, FILTER_SANITIZE_STRING);
+    $price = $_POST['price'];
+    $price = filter_var($price, FILTER_SANITIZE_STRING);
+    $details = $_POST['details'];
+    $details = filter_var($details, FILTER_SANITIZE_STRING);
+
+    $image = $_FILES['image']['name'];
+    $image = filter_var($image, FILTER_SANITIZE_STRING);
+    $image_size = $_FILES['image']['size'];
+    $image_tmp_name = $_FILES['image']['tmp_name'];
+    $image_folder = 'uploaded_img/'.$image;
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -39,6 +57,8 @@ if(!isset($admin_id)){
                 while($fetch_products = $select_products->fetch(PDO::FETCH_ASSOC)){
         ?>
         <form action="" method="POST" enctype="multipart/form-data">
+            <input type="hidden" class="old_image" value="<?= $fetch_products['image']; ?>">
+            <input type="hidden" class="pid" value="<?= $fetch_products['id']; ?>">
             <img src="uploaded_img/<?= $fetch_products['image']; ?>" alt="">
             <input type="text" name="name" placeholder="Digitar nome" required class="box" value="<?= $fetch_products['name']; ?>">
             <input type="number" name="price" placeholder="Digitar preço" required class="box" value="<?= $fetch_products['price']; ?>">
