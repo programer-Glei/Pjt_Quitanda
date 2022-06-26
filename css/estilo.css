@@ -386,6 +386,9 @@ section {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .dashboard .box-container .box {
@@ -471,6 +474,9 @@ section {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .show-products .box-container .box {
@@ -561,16 +567,35 @@ section {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .placed-orders .box-container .box {
-  text-align: center;
   border: 0.2rem solid #333;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   background-color: #fff;
   border-radius: 0.5rem;
   padding: 2rem;
+}
+
+.placed-orders .box-container .box p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  font-size: 2rem;
+  color: #666;
+}
+
+.placed-orders .box-container .box .drop-down {
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  font-size: 1.8rem;
+  border: 0.2rem solid #333;
+  border-radius: 0.5rem;
+  background-color: #f6f6f6;
+  margin-bottom: 0.5rem;
 }
 
 /* footer - rodapé */
@@ -587,6 +612,9 @@ section {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .footer .box-container .box h3 {

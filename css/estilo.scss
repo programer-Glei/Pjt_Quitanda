@@ -15,6 +15,7 @@ $box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
     gap: 2.5rem;
     align-items: flex-start;
+    justify-content: center;
 }
 
 *{
@@ -503,12 +504,28 @@ section{
         @include grid(33rem);
 
         .box{
-            text-align: center;
             border: $border;
             box-shadow: $box-shadow;
             background-color: $--white;
             border-radius: 0.5rem;
             padding: 2rem;
+
+            p{
+                margin-bottom: 1rem;
+                line-height: 1.5;
+                font-size: 2rem;
+                color: $light-color;
+            }
+
+            .drop-down{
+                width: 100%;
+                padding: 1.2rem 1.4rem;
+                font-size: 1.8rem;
+                border: $border;
+                border-radius: 0.5rem;
+                background-color: $--light-bg;
+                margin-bottom: 0.5rem;
+            }
         }
     }
 }
