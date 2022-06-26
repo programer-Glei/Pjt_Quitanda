@@ -34,15 +34,27 @@ if(!isset($admin_id)){
                 $select_orders->execute();
                 if($select_orders->rowCount() > 0){
                     while($fetch_orders = $select_orders->fetch(PDO::FETCH_ASSOC)){
-                        
-                    }
-                }else{
-                    echo '<p class="empty">nenhum pedido feito ainda!</p>';
-                }
             ?>
             <div class="box">
-
+                <p>ID do usuário: <span><?=$fetch_orders['user_id'];?></span>  </p>
+                <p>Placed on: <span><?=$fetch_orders['laced_on'];?></span>  </p>
+                <p>Nome: <span><?=$fetch_orders['name'];?></span>  </p>
+                <p>Email: <span><?=$fetch_orders['email'];?></span>  </p>
+                <p>Número: <span><?=$fetch_orders['number'];?></span>  </p>
+                <p>Endereço: <span><?=$fetch_orders['address'];?></span>  </p>
+                <p>Total de produtos: <span><?=$fetch_orders['total_products'];?></span>  </p>
+                <p>Preço total: <span><?=$fetch_orders['total_price'];?></span>  </p>
+                <p>Forma de pagamento: <span><?=$fetch_orders['total_price'];?></span>  </p>
+                <form action="" method="POST">
+                    
+                </form>
             </div>
+            <?php
+                }
+            }else{
+                echo '<p class="empty">nenhum pedido feito ainda!</p>';
+            }
+            ?>
         </div>
     </section>
 
