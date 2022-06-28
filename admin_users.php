@@ -8,7 +8,7 @@ $admin_id = $_SESSION['admin_id'];
 
 if(!isset($admin_id)){
     header('location:login.php');
-}
+};
 
 ?>
 
@@ -26,6 +26,23 @@ if(!isset($admin_id)){
 </head>
 <body>
     <?php include 'admin_header.php'; ?>
+
+    <div class="user-accounts">
+        <h1 class="title">Contas de usuário</h1>
+        <div class="box-container">
+            <?php
+                $select_users = $conn->prepare("SELECT * FROM `users`");
+                $select_users->execute();
+                while($fetch_users = $select_users->fetch(PDO::FETCH_ASSOC)){
+            ?>
+            <div class="box">
+
+            </div>
+            <?php
+            }
+            ?>
+        </div>
+    </div>
 
     <script src="java/script.js"></script>
 </body>
