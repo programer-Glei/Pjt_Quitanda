@@ -588,6 +588,10 @@ section {
   color: #666;
 }
 
+.placed-orders .box-container .box p span {
+  color: #27ae60;
+}
+
 .placed-orders .box-container .box .drop-down {
   width: 100%;
   padding: 1.2rem 1.4rem;
@@ -708,6 +712,10 @@ section {
   .update-products form img {
     height: auto;
     width: 100%;
+  }
+  .placed-orders .box-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 /*# sourceMappingURL=estilo.css.map */

@@ -17,6 +17,14 @@ if(isset($_POST['UPDATE_ORDER'])){
     $update_orders = $conn->prepare("UPDATE `orders` SET payment_status = ? WHERE id = ?");
     $update_orders->execute([$update_payment,$order_id]);
     $message[] = 'O pagamento foi atualizado';
+};
+
+if(isset($_GET['delete'])){
+
+    $delete_id = $_GET['delete_id'];
+    $delete_orders = $conn->prepare("DELETE FROM `orders` WHERE id = ?");
+    $delete_orders->execute([$delete_id]);
+    header('location:admin_orders.php');
 }
 
 ?>
