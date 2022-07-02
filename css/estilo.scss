@@ -539,6 +539,30 @@ section{
 
     .box-container{
         @include grid(33rem);
+
+        .box{
+            border: $border;
+            box-shadow: $box-shadow;
+            background-color: $--white;
+            border-radius: 0.5rem;
+            padding: 2rem;
+            text-align: center;
+
+            img{
+                height: 15rem;
+                width: 15rem;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-bottom: 1rem;
+            }
+
+            p{
+                line-height: 1.5;
+                margin: 0.5rem 0;
+                font-size: 2rem;
+                color: $light-color;
+            }
+        }
     }
 }
 

@@ -617,6 +617,32 @@ section {
           justify-content: center;
 }
 
+.user-accounts .box-container .box {
+  border: 0.2rem solid #333;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.user-accounts .box-container .box img {
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.user-accounts .box-container .box p {
+  line-height: 1.5;
+  margin: 0.5rem 0;
+  font-size: 2rem;
+  color: #666;
+}
+
 /* footer - rodapé */
 .footer {
   background-color: #fff;
