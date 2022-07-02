@@ -534,6 +534,14 @@ section{
     }
 }
 
+/*user-accounts */
+.user-accounts{
+
+    .box-container{
+        @include grid(33rem);
+    }
+}
+
 /* footer - rodapé */
 .footer{
     background-color: $--white;

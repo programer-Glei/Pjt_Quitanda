@@ -36,7 +36,12 @@ if(!isset($admin_id)){
                 while($fetch_users = $select_users->fetch(PDO::FETCH_ASSOC)){
             ?>
             <div class="box">
-
+                <img src="uploaded_img/<?= $fetch_users['image']; ?>" alt="">
+                <p>Id de usuário: <span><?= $fetch_users['id']; ?></span></p>
+                <p>Nome de usuário: <span><?= $fetch_users['name']; ?></span></p>
+                <p>Email: <span><?= $fetch_users['email']; ?></span></p>
+                <p>Tipo de usuário: <span><?= $fetch_users['user_type']; ?></span></p>
+                <a href="admin_users.php?delete=<?= $fetch_users['id']; ?>" onclick="return confirm('delete this user?');" class="delete-btn">Deletar</a>
             </div>
             <?php
             }
