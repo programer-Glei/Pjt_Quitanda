@@ -615,6 +615,7 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  gap: 1.5rem;
 }
 
 .user-accounts .box-container .box {
@@ -638,9 +639,13 @@ section {
 
 .user-accounts .box-container .box p {
   line-height: 1.5;
-  margin: 0.5rem 0;
+  padding: 0.5rem 0;
   font-size: 2rem;
   color: #666;
+}
+
+.user-accounts .box-container .box p span {
+  color: #27ae60;
 }
 
 /* footer - rodapé */

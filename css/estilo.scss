@@ -539,6 +539,7 @@ section{
 
     .box-container{
         @include grid(33rem);
+        gap: 1.5rem;
 
         .box{
             border: $border;
@@ -558,9 +559,13 @@ section{
 
             p{
                 line-height: 1.5;
-                margin: 0.5rem 0;
+                padding: 0.5rem 0;
                 font-size: 2rem;
                 color: $light-color;
+
+                span{
+                    color: $--green;
+                }
             }
         }
     }
@@ -699,6 +704,12 @@ section{
     }
     
     .placed-orders{
+        .box-container{
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .user-accounts{
         .box-container{
             grid-template-columns: 1fr;
         }

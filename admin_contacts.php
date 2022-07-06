@@ -27,6 +27,23 @@ if(!isset($admin_id)){
 <body>
     <?php include 'admin_header.php'; ?>
 
+    <section class="messages">
+        <div class="title">Mensagens</div>
+        <div class="box-container">
+            <?php
+                $select_message = $conn->prepare("SELECT * FROM `message`");
+                $select_message->execute();
+                if($select_message->rowCount() > 0){
+                    while($fetch_message = $select_message->fetch(PDO::FETCH_ASSOC)){
+
+                    }
+                }else{
+                    echo '<p class="empty">Você não tem mensagens</p>';
+                }
+            ?>
+        </div>
+    </section>
+
     <script src="java/script.js"></script>
 </body>
 </html>
