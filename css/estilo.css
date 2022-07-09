@@ -648,6 +648,42 @@ section {
   color: #27ae60;
 }
 
+/* messages */
+.messages .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(33rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+  gap: 2.5rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1.5rem;
+}
+
+.messages .box-container .box {
+  border: 0.2rem solid #333;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+.messages .box-container .box p {
+  line-height: 1.5;
+  padding: 0.5rem 0;
+  font-size: 2rem;
+  color: #666;
+}
+
+.messages .box-container .box p span {
+  color: #27ae60;
+}
+
 /* footer - rodapé */
 .footer {
   background-color: #fff;
@@ -760,6 +796,10 @@ section {
     width: 100%;
   }
   .placed-orders .box-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .user-accounts .box-container {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }

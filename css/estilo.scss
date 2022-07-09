@@ -571,6 +571,33 @@ section{
     }
 }
 
+/* messages */
+.messages{
+    .box-container{
+        @include grid(33rem);
+        gap: 1.5rem;
+
+        .box{
+            border: $border;
+            box-shadow: $box-shadow;
+            background-color: $--white;
+            border-radius: 0.5rem;
+            padding: 2rem;
+
+            p{
+                line-height: 1.5;
+                padding: 0.5rem 0;
+                font-size: 2rem;
+                color: $light-color;
+
+                span{
+                    color: $--green;
+                }
+            }
+        }
+    }
+}
+
 /* footer - rodapé */
 .footer{
     background-color: $--white;
