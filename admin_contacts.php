@@ -35,8 +35,17 @@ if(!isset($admin_id)){
                 $select_message->execute();
                 if($select_message->rowCount() > 0){
                     while($fetch_message = $select_message->fetch(PDO::FETCH_ASSOC)){
-
-                    }
+            ?>
+            <div class="box">
+                <p>ID do usuário: <span><?= $fetch_message['user_id'];?></span> </p>
+                <p>Nome: <span><?= $fetch_message['name'];?></span> </p>
+                <p>Número: <span><?= $fetch_message['number'];?></span> </p>
+                <p>Email: <span><?= $fetch_message['email'];?></span> </p>
+                <p>message: <span><?= $fetch_message['message'];?></span> </p>
+                <a href="admin_contacts.php?delete=<?=$fetch_message['id'];?>" onclick="return confirm('Deletar esta mensagem?');" class="delete-btn">Deletar</a>
+            </div>
+            <?php
+                }
                 }else{
                     echo '<p class="empty">Você não tem mensagens</p>';
                 }
