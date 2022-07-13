@@ -608,6 +608,20 @@ section{
         display: flex;
         align-items: center;
         min-height: 60vh;
+
+        .content{
+            width: 50rem;
+
+            span{
+                color: $--orange;
+                font-size: 1.7rem;
+            }
+
+            h3{
+                font-size: 3rem;
+                color: $--black;
+            }
+        }
     }
 }
 

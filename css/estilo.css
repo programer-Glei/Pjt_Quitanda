@@ -701,6 +701,20 @@ section {
   min-height: 60vh;
 }
 
+.home-bg .home .content {
+  width: 50rem;
+}
+
+.home-bg .home .content span {
+  color: #f39c12;
+  font-size: 1.7rem;
+}
+
+.home-bg .home .content h3 {
+  font-size: 3rem;
+  color: #333;
+}
+
 /* footer - rodapé */
 .footer {
   background-color: #fff;
