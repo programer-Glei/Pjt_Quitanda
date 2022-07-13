@@ -803,5 +803,9 @@ section {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+  .messages .box-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 /*# sourceMappingURL=estilo.css.map */
