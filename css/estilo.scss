@@ -598,6 +598,19 @@ section{
     }
 }
 
+/* home-bg */
+.home-bg{
+    background: url(../img/home-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .home{
+        display: flex;
+        align-items: center;
+        min-height: 60vh;
+    }
+}
+
 /* footer - rodapé */
 .footer{
     background-color: $--white;

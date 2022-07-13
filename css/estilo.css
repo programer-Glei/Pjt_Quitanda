@@ -684,6 +684,23 @@ section {
   color: #27ae60;
 }
 
+/* home-bg */
+.home-bg {
+  background: url(../img/home-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home-bg .home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 60vh;
+}
+
 /* footer - rodapé */
 .footer {
   background-color: #fff;
