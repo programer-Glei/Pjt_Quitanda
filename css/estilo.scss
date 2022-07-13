@@ -614,12 +614,21 @@ section{
 
             span{
                 color: $--orange;
-                font-size: 1.7rem;
+                font-size: 2.5rem;
             }
 
             h3{
                 font-size: 3rem;
+                text-transform: uppercase;
+                margin-top:1.5rem;
                 color: $--black;
+            }
+
+            p{
+                font-size: 1.6rem;
+                padding: 1rem 0;
+                line-height: 2;
+                color: $light-color;
             }
         }
     }

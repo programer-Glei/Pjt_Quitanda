@@ -707,12 +707,21 @@ section {
 
 .home-bg .home .content span {
   color: #f39c12;
-  font-size: 1.7rem;
+  font-size: 2.5rem;
 }
 
 .home-bg .home .content h3 {
   font-size: 3rem;
+  text-transform: uppercase;
+  margin-top: 1.5rem;
   color: #333;
+}
+
+.home-bg .home .content p {
+  font-size: 1.6rem;
+  padding: 1rem 0;
+  line-height: 2;
+  color: #666;
 }
 
 /* footer - rodapé */
