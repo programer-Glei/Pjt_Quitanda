@@ -724,6 +724,11 @@ section {
   color: #666;
 }
 
+.home-bg .home .content a {
+  display: inline-block;
+  width: auto;
+}
+
 /* footer - rodapé */
 .footer {
   background-color: #fff;
@@ -810,6 +815,15 @@ section {
   }
   .add-products form .flex .inputbox {
     width: 100%;
+  }
+  .home-bg {
+    background-position: left;
+  }
+  .home-bg .home {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
   }
 }
 

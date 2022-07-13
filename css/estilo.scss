@@ -630,6 +630,11 @@ section{
                 line-height: 2;
                 color: $light-color;
             }
+
+            a{
+                display: inline-block;
+                width: auto;
+            }
         }
     }
 }
@@ -731,6 +736,14 @@ section{
                 }
             }
     
+        }
+    }
+
+    .home-bg{
+        background-position: left;
+        .home{
+            justify-content: center;
+            text-align: center;
         }
     }
 }
