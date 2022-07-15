@@ -35,6 +35,15 @@ if(!isset($user_id)){
             </div>
         </section>
     </div>
+    <section class="home-category">
+        <h1 class="title">Compre por categoria</h1>
+        <div class="box-container">
+            <img src="img/cat-1.png" alt="">
+            <h3>Frutas</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo veritatis hic vel suscipit impedit quibusdam.</p>
+            <a href="category.php?category=fruits" class="btn">Frutas</a>
+        </div>
+    </section>
     <?php include 'footer.php'; ?>
     <script src="java/script.js"></script>
 </body>
