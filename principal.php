@@ -84,7 +84,7 @@ if(!isset($user_id)){
                 <input type="hidden" name="p_image" value="<?= $fetch_products['image']; ?>">
                 <input type="number" name="p_qty" value="1" min="1" class="qty">
                 <input type="submit" value="Adicionar a lista de desejos" class="option-btn" name="add_to_wishlist">
-                <input type="submit" value="Adicionar no carrinho" class="option-btn" name="add_to_cart">
+                <input type="submit" value="Adicionar no carrinho" class="btn" name="add_to_cart">
             </form>
             <?php
                 }
