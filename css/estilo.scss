@@ -639,6 +639,40 @@ section{
     }
 }
 
+/* home-category */
+.home-category{
+    .box-container{
+        @include grid(27rem);
+        gap:1.5rem;
+
+        .box{
+            padding: 2rem;
+            text-align: center;
+            border: $border;
+            box-shadow: $box-shadow;
+            border-radius: 0.5rem;
+
+            img{
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+
+            h3{
+                color: $--black;
+                padding: 1rem 0;
+                font-size: 2rem;
+            }
+
+            p{
+                line-height: 1.5;
+                font-size: 1.5rem;
+                color: $light-color;
+                padding: 0.5rem 0;
+            }
+        }
+    }
+}
+
 /* footer - rodapé */
 .footer{
     background-color: $--white;

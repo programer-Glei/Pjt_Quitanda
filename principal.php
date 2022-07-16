@@ -28,7 +28,7 @@ if(!isset($user_id)){
     <div class="home-bg">
         <section class="home">
             <div class="content">
-                <span>não entre em pânico, vá orgânico</span>
+                <span>Não entre em pânico, vá orgânico</span>
                 <h3>Alcance uma vida mais saudável com alimentos orgânicos</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit omnis asperiores tempora sequi ex, animi molestias voluptates praesentium amet dolorem delectus laboriosam fuga reprehenderit quibusdam quia vero rerum in velit.</p>
                 <a href="about.php" class="btn">Sobre nós</a>
