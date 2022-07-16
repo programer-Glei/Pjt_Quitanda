@@ -64,6 +64,30 @@ if(!isset($user_id)){
             </div>
         </div>
     </section>
+    <section class="products">
+        <h1 class="title">Produtos mais recentes</h1>
+        <div class="box-container">
+            <?php
+                $select_products = $conn->prepare("SELECT * FROM `products` LIMIT 6");
+                $select_products->execute();
+                if($select_products->rowCount() > 0){
+                    while($fetch_products = $select_products->fetch(PDO::FETCH_ASSOC)){
+            ?>
+            <form action="" class="box" method="POST">
+                <div class="price">R$<?= $fetch_products['price']; ?></div>
+                <a href="view_page.php?pid=<?= $fetch_products['id']; ?>"  class="fas fa-eye"></a>
+                <img src="uploaded_img/<?= $fetch_products['image']; ?>" alt="">
+                <div class="name"><?= $fetch_products['name']; ?></div>
+                <input type="hidden" name="p_name" value="<?= $fetch_products['image']; ?>">
+            </form>
+            <?php
+                }
+            }else{
+                echo '<p class="empty">Nenhum produto adicionado!</p>';
+            }
+            ?>
+        </div>
+    </section>
     <?php include 'footer.php'; ?>
     <script src="java/script.js"></script>
 </body>
