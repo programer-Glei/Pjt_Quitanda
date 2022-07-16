@@ -78,7 +78,13 @@ if(!isset($user_id)){
                 <a href="view_page.php?pid=<?= $fetch_products['id']; ?>"  class="fas fa-eye"></a>
                 <img src="uploaded_img/<?= $fetch_products['image']; ?>" alt="">
                 <div class="name"><?= $fetch_products['name']; ?></div>
-                <input type="hidden" name="p_name" value="<?= $fetch_products['image']; ?>">
+                <input type="hidden" name="p_id" value="<?= $fetch_products['id']; ?>">
+                <input type="hidden" name="p_name" value="<?= $fetch_products['name']; ?>">
+                <input type="hidden" name="p_price" value="<?= $fetch_products['price']; ?>">
+                <input type="hidden" name="p_image" value="<?= $fetch_products['image']; ?>">
+                <input type="number" name="p_qty" value="1" min="1" class="qty">
+                <input type="submit" value="Adicionar a lista de desejos" class="option-btn" name="add_to_wishlist">
+                <input type="submit" value="Adicionar no carrinho" class="option-btn" name="add_to_cart">
             </form>
             <?php
                 }

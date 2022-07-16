@@ -673,6 +673,44 @@ section{
     }
 }
 
+/* products */
+.products{
+    .box-container{
+        @include grid(35rem);
+        gap: 1.5rem;
+
+        .box{
+            padding: 2rem;
+            text-align: center;
+            border: $border;
+            background-color: $--white;
+            box-shadow: $box-shadow;
+            border-radius: 0.5rem;
+            position: relative;
+
+            .price{
+                position: absolute;
+                top: 1rem; left: 1rem;
+                padding: 1rem;
+                border-radius: 0.5rem;
+                background-color: $--red;
+                font-size: 2rem;
+                color: $--white;
+            }
+
+            .fa-eye{
+                position: absolute;
+                top: 1rem; right: 1rem;
+                border-radius: 0.5rem;
+                height: 4.5rem;
+                line-height: 4.3rem;
+                width: 5rem;
+                border: $border;
+            }
+        }
+    }
+}
+
 /* footer - rodapé */
 .footer{
     background-color: $--white;
@@ -826,6 +864,18 @@ section{
     }
 
     .messages{
+        .box-container{
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .home-category{
+        .box-container{
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .products{
         .box-container{
             grid-template-columns: 1fr;
         }

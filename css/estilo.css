@@ -772,6 +772,55 @@ section {
   padding: 0.5rem 0;
 }
 
+/* products */
+.products .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(35rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  gap: 2.5rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1.5rem;
+}
+
+.products .box-container .box {
+  padding: 2rem;
+  text-align: center;
+  border: 0.2rem solid #333;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.products .box-container .box .price {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #e74c3c;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.products .box-container .box .fa-eye {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border-radius: 0.5rem;
+  height: 4.5rem;
+  line-height: 4.3rem;
+  width: 5rem;
+  border: 0.2rem solid #333;
+}
+
 /* footer - rodapé */
 .footer {
   background-color: #fff;
@@ -901,6 +950,14 @@ section {
         grid-template-columns: 1fr;
   }
   .messages .box-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .home-category .box-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .products .box-container {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
