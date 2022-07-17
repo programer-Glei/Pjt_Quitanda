@@ -272,6 +272,31 @@ section {
   color: #27ae60;
 }
 
+.header .flex a span {
+  font-size: 2rem;
+  color: #666;
+}
+
+.header .flex a span:hover {
+  color: #27ae60;
+}
+
+.header .flex a i {
+  color: #666;
+}
+
+.header .flex a i:hover {
+  color: #27ae60;
+}
+
+.header .flex a:hover span {
+  color: #27ae60;
+}
+
+.header .flex a:hover:hover {
+  color: #27ae60;
+}
+
 .header .flex .icons > * {
   font-size: 2.5rem;
   color: #666;
@@ -898,6 +923,8 @@ section {
 .quick-view .box .details {
   padding: 1rem 0;
   line-height: 1.5;
+  font-size: 1.5rem;
+  color: #666;
 }
 
 /* footer - rodapé */
@@ -1039,6 +1066,10 @@ section {
   .products .box-container {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+  .quick-view .box img {
+    height: auto;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=estilo.css.map */

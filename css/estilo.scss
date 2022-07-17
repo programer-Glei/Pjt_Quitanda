@@ -245,6 +245,37 @@ section{
             }
         }
 
+        a{
+            span{
+                font-size: 2rem;
+                color: $light-color;
+
+                &:hover{
+                    color: $--green;
+                }
+            }
+
+            i{
+                color: $light-color;
+
+                &:hover{
+                    color: $--green;
+                }
+            }
+
+            &:hover{
+                span{
+                    color: $--green;
+                }
+            }
+
+            &:hover{
+                &:hover{
+                    color: $--green;
+                }
+            }
+        }
+
         .icons > *{
             font-size: 2.5rem;
             color: $light-color;
@@ -786,6 +817,8 @@ section{
         .details{
             padding: 1rem 0;
             line-height: 1.5;
+            font-size: 1.5rem;
+            color: $light-color;
         }
     }
 }
@@ -959,5 +992,13 @@ section{
             grid-template-columns: 1fr;
         }
     }
-    
+
+    .quick-view{
+        .box{
+            img{
+                height: auto;
+                width: 100%;
+            }
+        }
+    }
 }

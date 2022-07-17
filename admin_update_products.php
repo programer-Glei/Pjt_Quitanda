@@ -30,7 +30,7 @@ if(isset($_POST['update_product'])){
 
     $update_product = $conn->prepare("UPDATE `products` SET name = ?, category = ?, price = ?, details = ? WHERE id = ?");
 
-    $update_product->execute([$name,$category,$details,$price,$pid]);
+    $update_product->execute([$name,$category,$price,$details,$pid]);
 
     $message[] = 'produto atualizado com sucesso!';
 
