@@ -25,6 +25,38 @@ if(!isset($user_id)){
 </head>
 <body>
     <?php include 'header.php'; ?>
+    <section class="products">
+        <div class="title">Categorias de produtos</div>
+        
+        <div class="box-container">
+        <?php
+            $category_name = $_GET['category'];
+            $select_products = $conn->prepare("SELECT * FROM `products` WHERE category = ?");
+            $select_products->execute([$category_name]);
+            if($select_products->rowCount() > 0){
+                while($fetch_products = $select_products->fetch(PDO::FETCH_ASSOC)){
+        ?>
+        <form action="" class="box" method="POST">
+            <div class="price">R$<?= $fetch_products['price']; ?></div>
+            <a href="view_page.php?pid=<?= $fetch_products['id']; ?>"  class="fas fa-eye"></a>
+            <img src="uploaded_img/<?= $fetch_products['image']; ?>" alt="">
+            <div class="name"><?= $fetch_products['name']; ?></div>
+            <input type="hidden" name="pid" value="<?= $fetch_products['id']; ?>">
+            <input type="hidden" name="p_name" value="<?= $fetch_products['name']; ?>">
+            <input type="hidden" name="p_price" value="<?= $fetch_products['price']; ?>">
+            <input type="hidden" name="p_image" value="<?= $fetch_products['image']; ?>">
+            <input type="number" name="p_qty" value="1" min="1" class="qty">
+            <input type="submit" value="Adicionar a lista de desejos" class="option-btn" name="add_to_wishlist">
+            <input type="submit" value="Adicionar no carrinho" class="btn" name="add_to_cart">
+        </form>
+        <?php
+                }
+            }else{
+                echo '<p class="empty">nenhum produto disponível!</p>';
+            }
+        ?>
+        </div>
+    </section>
     <?php include 'footer.php'; ?>
     <script src="java/script.js"></script>
 </body>
