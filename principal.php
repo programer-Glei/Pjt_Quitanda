@@ -10,6 +10,26 @@ if(!isset($user_id)){
     header('location:login.php');
 }
 
+if(isset($_POST['add_to_wishlist'])){
+
+    $p_name = $_POST['p_name'];
+    $p_name = filter_var($p_name, FILTER_SANITIZE_STRING);
+    $p_price = $_POST['p_price'];
+    $p_price = filter_var($p_price, FILTER_SANITIZE_STRING);
+    $p_image = $_POST['p_image'];
+    $p_image = filter_var($p_image, FILTER_SANITIZE_STRING);
+
+    $check_wishlist_number = $conn->prepare("SELECT * FROM `wishlist` WHERE name = ? AND user_id = ?");
+    $check_wishlist_number->execute([$p_name,$user_id]);
+
+    $check_cart_number = $conn->prepare("SELECT * FROM `cart` WHERE name = ? AND user_id = ?");
+    $check_cart_number->execute([$p_name,$user_id]);
+
+    if($check_wishlist_number->rowCount() > 0){
+        $message[] = 'já adicionado à lista de desejos';
+    }elseif($check_cart_number->rowCount() > 0){
+        $message[] = 'já adicionado ao carrinho';
+    }
 ?>
 
 <!DOCTYPE html>
