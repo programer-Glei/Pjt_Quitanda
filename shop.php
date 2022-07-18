@@ -25,11 +25,17 @@ if(!isset($user_id)){
 </head>
 <body>
     <?php include 'header.php'; ?>
+    <section class="p-category">
+        <a href="category.php?category=fruits">Frutas</a>
+        <a href="category.php?category=vegitables">Vegetais</a>
+        <a href="category.php?category=fish">Peixes</a>
+        <a href="category.php?category=meat">Carne</a>
+    </section>
     <section class="products">
         <h1 class="title">Produtos mais recentes</h1>
         <div class="box-container">
             <?php
-                $select_products = $conn->prepare("SELECT * FROM `products` LIMIT 6");
+                $select_products = $conn->prepare("SELECT * FROM `products`");
                 $select_products->execute();
                 if($select_products->rowCount() > 0){
                     while($fetch_products = $select_products->fetch(PDO::FETCH_ASSOC)){

@@ -823,6 +823,20 @@ section{
     }
 }
 
+/* p-category */
+.p-category{
+    @include grid(27rem);
+    gap: 1.5rem;
+    a{
+        padding: 2rem;
+        text-align: center;
+        border: $border;
+        background-color: $--white;
+        box-shadow: $box-shadow;
+        border-radius: 0.5rem;
+    }
+}
+
 /* footer - rodapé */
 .footer{
     background-color: $--white;
