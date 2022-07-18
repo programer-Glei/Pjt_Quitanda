@@ -828,12 +828,19 @@ section{
     @include grid(27rem);
     gap: 1.5rem;
     a{
-        padding: 2rem;
+        padding: 1.5rem;
         text-align: center;
         border: $border;
         background-color: $--white;
         box-shadow: $box-shadow;
         border-radius: 0.5rem;
+        font-size: 2rem;
+        color: $--black;
+
+        &:hover{
+            background-color: $--black;
+            color: $--white;
+        }
     }
 }
 

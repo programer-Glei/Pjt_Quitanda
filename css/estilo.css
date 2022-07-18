@@ -944,13 +944,20 @@ section {
 }
 
 .p-category a {
-  padding: 2rem;
+  padding: 1.5rem;
   text-align: center;
   border: 0.2rem solid #333;
   background-color: #fff;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.p-category a:hover {
+  background-color: #333;
+  color: #fff;
 }
 
 /* footer - rodapé */
