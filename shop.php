@@ -8,7 +8,7 @@ $user_id = $_SESSION['user_id'];
 
 if(!isset($user_id)){
     header('location:login.php');
-}
+};
 
 if(isset($_POST['add_to_wishlist'])){
 

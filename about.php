@@ -25,6 +25,20 @@ if(!isset($user_id)){
 </head>
 <body>
     <?php include 'header.php'; ?>
+    <section class="about">
+        <div class="row">
+            <img src="img/about-img-1.png" alt="">
+            <h3>Porque escolher-nos?</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat eaque adipisci nemo voluptate iure? Tempora natus quas, ut a fugit repellendus perferendis expedita nesciunt quo eum adipisci voluptatibus autem distinctio!</p>
+            <a href="contact.php" class="btn">Contate-nos</a>
+        </div>
+        <div class="row">
+            <img src="img/about-img-2.png" alt="">
+            <h3>o que nós fornecemos?</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat eaque adipisci nemo voluptate iure? Tempora natus quas, ut a fugit repellendus perferendis expedita nesciunt quo eum adipisci voluptatibus autem distinctio!</p>
+            <a href="shop.php" class="btn">Nossa loja</a>
+        </div>
+    </section>
     <?php include 'footer.php'; ?>
     <script src="java/script.js"></script>
 </body>
