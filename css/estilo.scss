@@ -854,6 +854,23 @@ section{
 
         .box{
             flex: 1 1 40rem;
+
+            img{
+                margin-bottom: 1rem;
+                width: 100%;
+            }
+
+            h3{
+                padding: 1rem 0;
+                font-size: 3rem;
+                color: $--black;
+            }
+
+            p{
+                line-height: 2;
+                font-size: 1.6rem;
+                color: $light-color;
+            }
         }
     }
 }

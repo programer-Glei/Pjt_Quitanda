@@ -961,6 +961,41 @@ section {
 }
 
 /* about*/
+.about .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 3rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .row .box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+
+.about .row .box img {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.about .row .box h3 {
+  padding: 1rem 0;
+  font-size: 3rem;
+  color: #333;
+}
+
+.about .row .box p {
+  line-height: 2;
+  font-size: 1.6rem;
+  color: #666;
+}
+
 /* footer - rodapé */
 .footer {
   background-color: #fff;
