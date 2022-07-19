@@ -844,6 +844,19 @@ section{
     }
 }
 
+/* about*/
+.about{
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+        align-items: center;
+
+        .box{
+            flex: 1 1 40rem;
+        }
+    }
+}
 /* footer - rodapé */
 .footer{
     background-color: $--white;
