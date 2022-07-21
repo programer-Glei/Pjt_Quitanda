@@ -881,6 +881,29 @@ section{
         }
     }
 }
+
+/* reviews */
+.reviews{
+    .box-container{
+        @include grid(30rem);
+        gap: 1.5rem;
+
+        .box{
+            padding: 2rem;
+            text-align: center;
+            border: $border;
+            background-color: $--white;
+            box-shadow: $box-shadow;
+            border-radius: 0.5rem;
+
+            img{
+                height: 10rem;
+            }
+        }
+    }
+}
+
+
 /* footer - rodapé */
 .footer{
     background-color: $--white;
