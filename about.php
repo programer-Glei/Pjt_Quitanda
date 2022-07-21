@@ -92,6 +92,30 @@ if(!isset($user_id)){
                 </div>
                 <h3>Jonh Deo</h3>
             </div>
+            <div class="box">
+                <img src="img/pic-5.png" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum nam repellendus iure dolore soluta enim!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3>Jonh Deo</h3>
+            </div>
+            <div class="box">
+                <img src="img/pic-6.png" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum nam repellendus iure dolore soluta enim!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3>Jonh Deo</h3>
+            </div>
         </div>
     </section>
     <?php include 'footer.php'; ?>
