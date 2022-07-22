@@ -25,6 +25,16 @@ if(!isset($user_id)){
 </head>
 <body>
     <?php include 'header.php'; ?>
+    <section class="contact">
+        <div class="title">Entrar em contato</div>
+        <form action="" method="POST">
+            <input type="text" name="name" class="box" required placeholder="Digitar seu nome">
+            <input type="email" name="email" class="box" placeholder="Digite seu email" required>
+            <input type="number" name="number" min="0" class="box" required placeholder="Digitar seu número">
+            <textarea name="msg"  cols="30" rows="10" class="box" placeholder="Digiar sua mensagem" required></textarea>
+            <input type="submit" value="Enviar mensagem" class="btn" name="send">
+        </form>
+    </section>
     <?php include 'footer.php'; ?>
     <script src="java/script.js"></script>
 </body>
