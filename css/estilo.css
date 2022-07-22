@@ -1031,6 +1031,25 @@ section {
 
 .reviews .box-container .box img {
   height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.reviews .box-container .box p {
+  padding: 1rem 0;
+  font-size: 1.6rem;
+  color: #666;
+  line-height: 2;
+}
+
+.reviews .box-container .box .stars {
+  display: inline-block;
+  padding: 1rem;
+  background-color: #f6f6f6;
+  border: 0.2rem solid #333;
 }
 
 /* footer - rodapé */

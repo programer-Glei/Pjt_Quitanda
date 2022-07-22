@@ -898,6 +898,24 @@ section{
 
             img{
                 height: 10rem;
+                width: 10rem;
+                border-radius: 50%;
+                margin-bottom: 1rem;
+                object-fit: cover;
+            }
+
+            p{
+                padding: 1rem 0;
+                font-size: 1.6rem;
+                color: $light-color;
+                line-height: 2;
+            }
+
+            .stars{
+                display: inline-block;
+                padding: 1rem;
+                background-color: $--light-bg;
+                border: $border;
             }
         }
     }
