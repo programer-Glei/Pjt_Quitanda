@@ -1077,6 +1077,23 @@ section {
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
+  padding-top: 1rem;
+}
+
+.contact form .box {
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  border: 0.2rem solid #333;
+  margin: 1rem 0;
+  background-color: #f6f6f6;
+  font-size: 1.8rem;
+  color: #333;
+  border-radius: 0.5rem;
+}
+
+.contact form textarea {
+  height: 15rem;
+  resize: none;
 }
 
 /* footer - rodapé */
