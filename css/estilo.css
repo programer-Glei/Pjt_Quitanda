@@ -1050,6 +1050,20 @@ section {
   padding: 1rem;
   background-color: #f6f6f6;
   border: 0.2rem solid #333;
+  border-radius: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.reviews .box-container .box .stars i {
+  font-size: 1.7rem;
+  color: #f39c12;
+  margin: 0 0.3rem;
+}
+
+.reviews .box-container .box h3 {
+  margin-top: 1rem;
+  color: #333;
+  font-size: 2rem;
 }
 
 /* footer - rodapé */
