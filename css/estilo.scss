@@ -935,6 +935,19 @@ section{
     }
 }
 
+/* contact */
+.contact{
+    form{
+        margin: 0 auto;
+        max-width: 50rem;
+        padding: 2rem;
+        text-align: center;
+        border: $border;
+        background-color: $--white;
+        box-shadow: $box-shadow;
+        border-radius: 0.5rem;
+    }
+}
 
 /* footer - rodapé */
 .footer{

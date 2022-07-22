@@ -1066,6 +1066,19 @@ section {
   font-size: 2rem;
 }
 
+/* contact */
+.contact form {
+  margin: 0 auto;
+  max-width: 50rem;
+  padding: 2rem;
+  text-align: center;
+  border: 0.2rem solid #333;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
 /* footer - rodapé */
 .footer {
   background-color: #fff;
