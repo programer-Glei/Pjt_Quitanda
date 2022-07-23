@@ -966,6 +966,24 @@ section{
     }
 }
 
+/* search-form */
+.search-form{
+    
+    form{
+        display: flex;
+        gap: 1.5rem;
+
+        .box{
+            width: 100%;
+        }
+
+        .btn{
+            display: inline-block;
+            width: auto;
+        }
+    }
+}
+
 /* footer - rodapé */
 .footer{
     background-color: $--white;

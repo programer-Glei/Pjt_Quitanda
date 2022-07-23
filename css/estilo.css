@@ -1096,6 +1096,23 @@ section {
   resize: none;
 }
 
+/* search-form */
+.search-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.search-form form .box {
+  width: 100%;
+}
+
+.search-form form .btn {
+  display: inline-block;
+  width: auto;
+}
+
 /* footer - rodapé */
 .footer {
   background-color: #fff;
