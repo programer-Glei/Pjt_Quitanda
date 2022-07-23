@@ -21,11 +21,16 @@ if(isset($_POST['send'])){
     $msg = $_POST['msg'];
     $msg = filter_var($msg, FILTER_SANITIZE_STRING);
 
-    $select_message = $conn->prepare("SELECT * FROM `message` WHERE name = ?, email = ?, number = ?, message = ?");
+    $select_message = $conn->prepare("SELECT * FROM `message` WHERE name = ? AND email = ? AND number = ? AND message = ?");
     $select_message->execute([$name,$email,$number,$msg]);
 
     if($select_message->rowCount() > 0){
-        
+        $message[] = 'Mensagem enviada!';
+    }else{
+        $insert_message = $conn->prepare("INSERT INTO `message`(user_id, name, email, number, message) VALUES(?,?,?,?,?)");
+        $insert_message->execute([$user_id, $name, $email, $number, $msg]);
+
+        $message[] = 'Mensagem enviada com sucesso!';
     }
 
 }
