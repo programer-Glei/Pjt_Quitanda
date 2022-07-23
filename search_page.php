@@ -25,6 +25,12 @@ if(!isset($user_id)){
 </head>
 <body>
     <?php include 'header.php'; ?>
+    <section class="search-form">
+        <form action="" method="POST">
+            <input type="text" class="box" name="search_box" placeholder="procurar produtos...">
+            <input type="submit" name="search_btn" value="Procurar" class="btn">
+        </form>
+    </section>
     <?php include 'footer.php'; ?>
     <script src="java/script.js"></script>
 </body>
