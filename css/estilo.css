@@ -1102,15 +1102,28 @@ section {
   display: -ms-flexbox;
   display: flex;
   gap: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .search-form form .box {
   width: 100%;
+  padding: 1.2rem 1.4rem;
+  border: 0.2rem solid #333;
+  margin: 1rem 0;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  font-size: 1.8rem;
+  color: #333;
+  border-radius: 0.5rem;
 }
 
 .search-form form .btn {
   display: inline-block;
   width: auto;
+  margin-top: 0;
 }
 
 /* footer - rodapé */
