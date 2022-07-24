@@ -25,6 +25,14 @@ if(!isset($user_id)){
 </head>
 <body>
     <?php include 'header.php'; ?>
+    <section class="wishlist">
+        <h1 class="title">Produtos adicionados</h1>
+        <div class="box-container">
+            <?php
+                $select_wishlist = $conn->prepare("SELECT * FROM `wishlist` WHERE user_id = ?");
+            ?>
+        </div>
+    </section>
     <?php include 'footer.php'; ?>
     <script src="java/script.js"></script>
 </body>
