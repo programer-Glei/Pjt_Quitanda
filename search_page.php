@@ -1,14 +1,16 @@
 <?php
-
+header('Content-Type: text/html; charset=utf-8');
 @include 'config.php';
 
 session_start();
 
 $user_id = $_SESSION['user_id'];
 
+$search_box = '';
+
 if(!isset($user_id)){
     header('location:login.php');
-}
+};
 
 if(isset($_POST['add_to_wishlist'])){
 
@@ -36,7 +38,7 @@ if(isset($_POST['add_to_wishlist'])){
         $insert_wishlist->execute([$user_id, $pid, $p_name, $p_price, $p_image]);
         $message[] = 'adicionado a lista de desejos';
     }
-}
+};
 
 if(isset($_POST['add_to_cart'])){
 
@@ -72,6 +74,8 @@ if(isset($_POST['add_to_cart'])){
         $message[] = 'adicionado ao carrinho!';
     }
 
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -96,14 +100,14 @@ if(isset($_POST['add_to_cart'])){
 
     <?php
         if(isset($_POST['search_btn'])){
-            
-        }
+            $search_box = $_POST['search_box'];
+            $search_box = filter_var($search_box, FILTER_SANITIZE_STRING);
+        };
     ?>
     <section class="products">
-        <h1 class="title">Produtos mais recentes</h1>
         <div class="box-container">
             <?php
-                $select_products = $conn->prepare("SELECT * FROM `products` LIMIT 6");
+                $select_products = $conn->prepare("SELECT * FROM `products` WHERE name LIKE '%{$search_box}%' OR category LIKE '%{$search_box}%'");
                 $select_products->execute();
                 if($select_products->rowCount() > 0){
                     while($fetch_products = $select_products->fetch(PDO::FETCH_ASSOC)){
@@ -124,11 +128,14 @@ if(isset($_POST['add_to_cart'])){
             <?php
                 }
             }else{
-                echo '<p class="empty">Nenhum produto adicionado!</p>';
+                echo '<p class="empty">Nenhum resultado encontrado!</p>';
             }
             ?>
         </div>
     </section>
+    <?php
+
+    ?>
     <?php include 'footer.php'; ?>
     <script src="java/script.js"></script>
 </body>
