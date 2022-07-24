@@ -105,25 +105,25 @@ if(isset($_POST['add_to_cart'])){
                 <img src="img/cat-1.png" alt="">
                 <h3>Frutas</h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo veritatis hic vel suscipit impedit quibusdam.</p>
-                <a href="category.php?category=fruits" class="btn">Frutas</a>
+                <a href="category.php?category=frutas" class="btn">Frutas</a>
             </div>
             <div class="box">
                 <img src="img/cat-2.png" alt="">
                 <h3>Carne</h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo veritatis hic vel suscipit impedit quibusdam.</p>
-                <a href="category.php?category=meat" class="btn">Carne</a>
+                <a href="category.php?category=carne" class="btn">Carne</a>
             </div>
             <div class="box">
                 <img src="img/cat-3.png" alt="">
                 <h3>Vegetais</h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo veritatis hic vel suscipit impedit quibusdam.</p>
-                <a href="category.php?category=vegitables" class="btn">Vegetais</a>
+                <a href="category.php?category=vegetais" class="btn">Vegetais</a>
             </div>
             <div class="box">
                 <img src="img/cat-4.png" alt="">
                 <h3>Peixes</h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo veritatis hic vel suscipit impedit quibusdam.</p>
-                <a href="category.php?category=fish" class="btn">Peixes</a>
+                <a href="category.php?category=peixe" class="btn">Peixes</a>
             </div>
         </div>
     </section>
