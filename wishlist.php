@@ -30,6 +30,15 @@ if(!isset($user_id)){
         <div class="box-container">
             <?php
                 $select_wishlist = $conn->prepare("SELECT * FROM `wishlist` WHERE user_id = ?");
+                $select_wishlist->execute([$user_id]);
+                if($select_wishlist->rowCount() > 0){
+                    while($fetch_wishlist = $select_wishlist->fetch(PDO::FETCH_ASSOC)){
+            ?>
+            <?php 
+                }
+            }else{
+                echo '<p class="empty">Sua Lista de Desejos está vazia</p>';
+            }
             ?>
         </div>
     </section>
