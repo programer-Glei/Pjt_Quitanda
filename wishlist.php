@@ -34,6 +34,18 @@ if(!isset($user_id)){
                 if($select_wishlist->rowCount() > 0){
                     while($fetch_wishlist = $select_wishlist->fetch(PDO::FETCH_ASSOC)){
             ?>
+            <form action="" method="POST" class="box">
+                <a href="view_page.php?pid=<?= $fetch_wishlist['pid']; ?>" class="fas fa-eye"></a>
+                <div class="price">R$<?= $fetch_wishlist['price']; ?></div>
+                <img src="uplaoded_img/<?= $fetch_wishlist['image']; ?>" alt="">
+                <div class="name"><?= $fetch_wishlist['name']; ?></div>
+                <input type="number" name="1" value="1" class="qty" name="qty">
+                <input type="hidden" name="id" value="<?= $fetch_wishlist['id'];?>">
+                <input type="hidden" name="name" value="<?= $fetch_wishlist['name'];?>">
+                <input type="hidden" name="price" value="<?= $fetch_wishlist['price'];?>">
+                <input type="hidden" name="image" value="<?= $fetch_wishlist['image'];?>">
+                <input type="submit" value="Adicionar ao carrinho" name="add_to_cart">
+            </form>
             <?php 
                 }
             }else{
