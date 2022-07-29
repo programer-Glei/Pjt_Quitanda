@@ -10,6 +10,42 @@ if(!isset($user_id)){
     header('location:login.php');
 }
 
+if(isset($_POST['add_to_cart'])){
+
+    $pid = $_POST['pid'];
+    $pid = filter_var($pid, FILTER_SANITIZE_STRING);
+    $p_name = $_POST['p_name'];
+    $p_name = filter_var($p_name, FILTER_SANITIZE_STRING);
+    $p_price = $_POST['p_price'];
+    $p_price = filter_var($p_price, FILTER_SANITIZE_STRING);
+    $p_image = $_POST['p_image'];
+    $p_image = filter_var($p_image, FILTER_SANITIZE_STRING);
+    $p_qty = $_POST['p_qty'];
+    $p_qty = filter_var($p_qty, FILTER_SANITIZE_STRING);
+
+    $check_cart_number = $conn->prepare("SELECT * FROM `cart` WHERE name = ? AND user_id = ?");
+    $check_cart_number->execute([$p_name,$user_id]);
+
+    
+    if($check_cart_number->rowCount() > 0){
+        $message[] = 'já adicionado ao carrinho';
+    }else{
+
+        $check_wishlist_number = $conn->prepare("SELECT * FROM `wishlist` WHERE name = ? AND user_id = ?");
+        $check_wishlist_number->execute([$p_name,$user_id]);
+
+        if($check_wishlist_number->rowCount() > 0){
+            $delete_wishlist = $conn->prepare("DELETE FROM `wishlist` WHERE name = ? AND user_id = ?");
+            $delete_wishlist->execute([$p_name,$user_id]);
+        }
+
+        $insert_cart = $conn->prepare("INSERT INTO `cart`(user_id, pid, name, price, quantity, image) VALUES(?,?,?,?,?,?)");
+        $insert_cart->execute([$user_id, $pid, $p_name, $p_price, $p_qty, $p_image]);
+        $message[] = 'adicionado ao carrinho!';
+    }
+
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -39,11 +75,11 @@ if(!isset($user_id)){
                 <div class="price">R$ <span><?= $fetch_wishlist['price']; ?></span> </div>
                 <img src="uplaoded_img/<?= $fetch_wishlist['image']; ?>" alt="">
                 <div class="name"><?= $fetch_wishlist['name']; ?></div>
-                <input type="number" name="1" value="1" class="qty" name="qty">
-                <input type="hidden" name="id" value="<?= $fetch_wishlist['id'];?>">
-                <input type="hidden" name="name" value="<?= $fetch_wishlist['name'];?>">
-                <input type="hidden" name="price" value="<?= $fetch_wishlist['price'];?>">
-                <input type="hidden" name="image" value="<?= $fetch_wishlist['image'];?>">
+                <input type="number" name="1" value="1" class="qty" name="p_qty">
+                <input type="hidden" name="pid" value="<?= $fetch_wishlist['id'];?>">
+                <input type="hidden" name="p_name" value="<?= $fetch_wishlist['name'];?>">
+                <input type="hidden" name="p_price" value="<?= $fetch_wishlist['price'];?>">
+                <input type="hidden" name="p_image" value="<?= $fetch_wishlist['image'];?>">
                 <input type="submit" value="Adicionar ao carrinho" name="add_to_cart">
             </form>
             <?php 
