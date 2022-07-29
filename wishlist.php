@@ -36,7 +36,7 @@ if(!isset($user_id)){
             ?>
             <form action="" method="POST" class="box">
                 <a href="view_page.php?pid=<?= $fetch_wishlist['pid']; ?>" class="fas fa-eye"></a>
-                <div class="price">R$<?= $fetch_wishlist['price']; ?></div>
+                <div class="price">R$ <span><?= $fetch_wishlist['price']; ?></span> </div>
                 <img src="uplaoded_img/<?= $fetch_wishlist['image']; ?>" alt="">
                 <div class="name"><?= $fetch_wishlist['name']; ?></div>
                 <input type="number" name="1" value="1" class="qty" name="qty">
