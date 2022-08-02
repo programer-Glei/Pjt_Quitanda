@@ -71,6 +71,7 @@ if(isset($_POST['add_to_cart'])){
                     while($fetch_wishlist = $select_wishlist->fetch(PDO::FETCH_ASSOC)){
             ?>
             <form action="" method="POST" class="box">
+                <a href="wishlist.php?delete=<?=$fetch_wishlist['id']; ?>" class="fas fa-times" onclick="return confirm('excluir isso da lista de desejos?');"></a>
                 <a href="view_page.php?pid=<?= $fetch_wishlist['pid']; ?>" class="fas fa-eye"></a>
                 <div class="price">R$ <span><?= $fetch_wishlist['price']; ?></span> </div>
                 <img src="uplaoded_img/<?= $fetch_wishlist['image']; ?>" alt="">

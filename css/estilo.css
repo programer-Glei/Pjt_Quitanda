@@ -1181,6 +1181,19 @@ section {
   background-color: #333;
 }
 
+.wishlist .box-container .box .fa-times {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  border-radius: 0.5rem;
+  height: 4.5rem;
+  line-height: 4.3rem;
+  width: 5rem;
+  color: #fff;
+  font-size: 2rem;
+  background-color: #e74c3c;
+}
+
 .wishlist .box-container .box img {
   width: 100%;
   margin-bottom: 1rem;

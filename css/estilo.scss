@@ -1035,6 +1035,18 @@ section{
                 }
             }
 
+            .fa-times{
+                position: absolute;
+                top: 1rem; left: 1rem;
+                border-radius: 0.5rem;
+                height: 4.5rem;
+                line-height: 4.3rem;
+                width: 5rem;
+                color: $--white;
+                font-size: 2rem;
+                background-color: $--red;
+            }
+
             img{
                 width: 100%;
                 margin-bottom: 1rem;
