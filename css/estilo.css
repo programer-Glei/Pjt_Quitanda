@@ -1154,7 +1154,8 @@ section {
 
 .wishlist .box-container .box .price {
   padding: 1rem;
-  color: #fff;
+  color: #e74c3c;
+  font-size: 2rem;
 }
 
 .wishlist .box-container .box .fa-eye {
