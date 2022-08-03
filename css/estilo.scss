@@ -1009,12 +1009,7 @@ section{
             position: relative;
 
             .price{
-                position: absolute;
-                top: 1rem; left: 1rem;
                 padding: 1rem;
-                border-radius: 0.5rem;
-                background-color: $--red;
-                font-size: 2rem;
                 color: $--white;
             }
 
@@ -1045,6 +1040,10 @@ section{
                 color: $--white;
                 font-size: 2rem;
                 background-color: $--red;
+
+                &:hover{
+                    background-color: $--black;
+                }
             }
 
             img{

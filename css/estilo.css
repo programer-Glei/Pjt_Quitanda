@@ -1153,13 +1153,7 @@ section {
 }
 
 .wishlist .box-container .box .price {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
   padding: 1rem;
-  border-radius: 0.5rem;
-  background-color: #e74c3c;
-  font-size: 2rem;
   color: #fff;
 }
 
@@ -1192,6 +1186,10 @@ section {
   color: #fff;
   font-size: 2rem;
   background-color: #e74c3c;
+}
+
+.wishlist .box-container .box .fa-times:hover {
+  background-color: #333;
 }
 
 .wishlist .box-container .box img {

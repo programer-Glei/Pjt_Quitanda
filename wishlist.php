@@ -73,15 +73,15 @@ if(isset($_POST['add_to_cart'])){
             <form action="" method="POST" class="box">
                 <a href="wishlist.php?delete=<?=$fetch_wishlist['id']; ?>" class="fas fa-times" onclick="return confirm('excluir isso da lista de desejos?');"></a>
                 <a href="view_page.php?pid=<?= $fetch_wishlist['pid']; ?>" class="fas fa-eye"></a>
-                <div class="price">R$ <span><?= $fetch_wishlist['price']; ?></span> </div>
                 <img src="uplaoded_img/<?= $fetch_wishlist['image']; ?>" alt="">
                 <div class="name"><?= $fetch_wishlist['name']; ?></div>
+                <div class="price">R$ <?= $fetch_wishlist['price']; ?></div>
                 <input type="number" name="1" value="1" class="qty" name="p_qty">
                 <input type="hidden" name="pid" value="<?= $fetch_wishlist['id'];?>">
                 <input type="hidden" name="p_name" value="<?= $fetch_wishlist['name'];?>">
                 <input type="hidden" name="p_price" value="<?= $fetch_wishlist['price'];?>">
                 <input type="hidden" name="p_image" value="<?= $fetch_wishlist['image'];?>">
-                <input type="submit" value="Adicionar ao carrinho" name="add_to_cart">
+                <input type="submit" value="Adicionar ao carrinho" name="add_to_cart" class="btn">
             </form>
             <?php 
                 }
