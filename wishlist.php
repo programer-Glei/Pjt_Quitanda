@@ -21,7 +21,6 @@ if(isset($_POST['add_to_cart'])){
     $p_image = $_POST['p_image'];
     $p_image = filter_var($p_image, FILTER_SANITIZE_STRING);
     $p_qty = $_POST['p_qty'];
-    echo $p_qty;
     $p_qty = filter_var($p_qty, FILTER_SANITIZE_STRING);
 
     $check_cart_number = $conn->prepare("SELECT * FROM `cart` WHERE name = ? AND user_id = ?");

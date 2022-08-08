@@ -1155,7 +1155,7 @@ section {
 .wishlist .box-container .box .price {
   padding: 1rem;
   color: #e74c3c;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .wishlist .box-container .box .fa-eye {
@@ -1201,7 +1201,7 @@ section {
 .wishlist .box-container .box .name {
   font-size: 2rem;
   color: #333;
-  padding: 1rem 0;
+  padding-top: 1rem;
 }
 
 .wishlist .box-container .box .qty {
