@@ -21,6 +21,7 @@ if(isset($_POST['add_to_cart'])){
     $p_image = $_POST['p_image'];
     $p_image = filter_var($p_image, FILTER_SANITIZE_STRING);
     $p_qty = $_POST['p_qty'];
+    echo $p_qty;
     $p_qty = filter_var($p_qty, FILTER_SANITIZE_STRING);
 
     $check_cart_number = $conn->prepare("SELECT * FROM `cart` WHERE name = ? AND user_id = ?");
@@ -76,7 +77,7 @@ if(isset($_POST['add_to_cart'])){
                 <img src="uploaded_img/<?= $fetch_wishlist['image']; ?>" alt="">
                 <div class="name"><?= $fetch_wishlist['name']; ?></div>
                 <div class="price">R$ <?= $fetch_wishlist['price']; ?></div>
-                <input type="number" name="1" value="1" class="qty" name="p_qty">
+                <input type="number"  value="1" class="qty" name="p_qty">
                 <input type="hidden" name="pid" value="<?= $fetch_wishlist['id'];?>">
                 <input type="hidden" name="p_name" value="<?= $fetch_wishlist['name'];?>">
                 <input type="hidden" name="p_price" value="<?= $fetch_wishlist['price'];?>">
