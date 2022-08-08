@@ -65,6 +65,7 @@ if(isset($_POST['add_to_cart'])){
         <h1 class="title">Produtos adicionados</h1>
         <div class="box-container">
             <?php
+                $grand_total = 0;
                 $select_wishlist = $conn->prepare("SELECT * FROM `wishlist` WHERE user_id = ?");
                 $select_wishlist->execute([$user_id]);
                 if($select_wishlist->rowCount() > 0){
@@ -83,12 +84,17 @@ if(isset($_POST['add_to_cart'])){
                 <input type="hidden" name="p_image" value="<?= $fetch_wishlist['image'];?>">
                 <input type="submit" value="Adicionar ao carrinho" name="add_to_cart" class="btn">
             </form>
-            <?php 
+            <?php
+                $grand_total += $fetch_wishlist['price'];
                 }
             }else{
                 echo '<p class="empty">Sua Lista de Desejos está vazia</p>';
             }
             ?>
+        </div>
+        <div class="wishlist-total">
+            <p>Geral total: <span>R$<?= $grand_total;?></span></p>
+            <a href="shpo.php" class="option-btn">Continue comprando</a>
         </div>
     </section>
     <?php include 'footer.php'; ?>
