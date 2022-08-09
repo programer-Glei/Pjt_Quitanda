@@ -994,6 +994,7 @@ section{
     }
 }
 
+/*wishlist*/
 .wishlist{
     .box-container{
         @include grid(35rem);
@@ -1067,6 +1068,22 @@ section{
                 border: $border;
                 width: 100%;
             }
+        }
+    }
+
+    .wishlist-total{
+        max-width: 50rem;
+        margin: 0 auto;
+        margin-top: 3rem;
+        padding: 2rem;
+        text-align: center;
+        border: $border;
+        background-color: $--white;
+        box-shadow: $box-shadow;
+        border-radius: 0.5rem;
+
+        p{
+            margin-bottom: 2rem;
         }
     }
 }

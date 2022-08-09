@@ -1126,6 +1126,7 @@ section {
   margin-top: 0;
 }
 
+/*wishlist*/
 .wishlist .box-container {
   display: -ms-grid;
   display: grid;
@@ -1212,6 +1213,23 @@ section {
   color: #333;
   border: 0.2rem solid #333;
   width: 100%;
+}
+
+.wishlist .wishlist-total {
+  max-width: 50rem;
+  margin: 0 auto;
+  margin-top: 3rem;
+  padding: 2rem;
+  text-align: center;
+  border: 0.2rem solid #333;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+.wishlist .wishlist-total p {
+  margin-bottom: 2rem;
 }
 
 /* footer - rodapé */
