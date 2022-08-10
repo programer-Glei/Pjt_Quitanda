@@ -80,6 +80,15 @@ section {
   background-color: #f39c12;
 }
 
+.disabled {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
 .flex-btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1230,6 +1239,12 @@ section {
 
 .wishlist .wishlist-total p {
   margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: #666;
+}
+
+.wishlist .wishlist-total p span {
+  color: #e74c3c;
 }
 
 /* footer - rodapé */

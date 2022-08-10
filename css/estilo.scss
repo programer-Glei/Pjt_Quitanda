@@ -90,6 +90,12 @@ section{
     background-color: $--orange;
 }
 
+.disabled{
+    user-select: none;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
 .flex-btn{
     display: flex;
     flex-wrap: wrap;

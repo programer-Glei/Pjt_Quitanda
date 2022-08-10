@@ -95,7 +95,7 @@ if(isset($_POST['add_to_cart'])){
         <div class="wishlist-total">
             <p>Geral total: <span>R$<?= $grand_total;?></span></p>
             <a href="shpo.php" class="option-btn">Continue comprando</a>
-            <a href="wishlist.php?delete_all" class="delete-btn <?= ($grand_total > 1)?'':'disable';?>">Deletar todos</a>
+            <a href="wishlist.php?delete_all" class="delete-btn <?= ($grand_total > 1)?'':'disabled';?>">Deletar todos</a>
         </div>
     </section>
     <?php include 'footer.php'; ?>
