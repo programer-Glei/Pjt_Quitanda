@@ -1084,6 +1084,12 @@ section{
 
         p{
             margin-bottom: 2rem;
+            font-size: 2.5rem;
+            color: $light-color;
+
+            span{
+                color: $--red;
+            }
         }
     }
 }
