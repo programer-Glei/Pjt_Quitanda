@@ -49,7 +49,9 @@ if(isset($_POST['add_to_cart'])){
 if(isset($_GET['delete'])){
 
     $delete_id = $_GET['delete'];
-    $delete_wishlist_item = $conn->prepare("DELETE FROM `wishlist` WHERE id = ? AND user_id = ?")
+    $delete_wishlist_item = $conn->prepare("DELETE FROM `wishlist` WHERE id = ?");
+    $delete_wishlist_item->execute([$delete_id]);
+    header('location:wishlist.php');
 }
 ?>
 
