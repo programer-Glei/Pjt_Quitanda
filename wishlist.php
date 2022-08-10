@@ -53,6 +53,13 @@ if(isset($_GET['delete'])){
     $delete_wishlist_item->execute([$delete_id]);
     header('location:wishlist.php');
 }
+
+if(isset($_GET['delete_all'])){
+
+    $delete_wishlist_item = $conn->prepare("DELETE FROM `wishlist` WHERE user_id = ?");
+    $delete_wishlist_item->execute([$user_id]);
+    header('location:wishlist.php');
+}
 ?>
 
 <!DOCTYPE html>
