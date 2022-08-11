@@ -25,7 +25,7 @@ if(!isset($user_id)){
 </head>
 <body>
     <?php include 'header.php'; ?>
-    <section class="shopping cart">
+    <section class="shopping-cart">
         <h1 class="title">Produtos adicionados</h1>
         <div class="box-container">
             <?php

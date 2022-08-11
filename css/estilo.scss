@@ -1100,6 +1100,106 @@ section{
     }
 }
 
+/*cart*/
+.shopping-cart{
+    .box-container{
+        @include grid(35rem);
+        gap: 1.5rem;
+
+        .box{
+            padding: 2rem;
+            text-align: center;
+            border: $border;
+            background-color: $--white;
+            box-shadow: $box-shadow;
+            border-radius: 0.5rem;
+            position: relative;
+
+            .price{
+                padding: 1rem;
+                color: $--red;
+                font-size: 2.5rem;
+            }
+
+            .fa-eye{
+                position: absolute;
+                top: 1rem; right: 1rem;
+                border-radius: 0.5rem;
+                height: 4.5rem;
+                line-height: 4.3rem;
+                width: 5rem;
+                border: $border;
+                color: $--black;
+                font-size: 2rem;
+
+                &:hover{
+                    color: $--white;
+                    background-color: $--black;
+                }
+            }
+
+            .fa-times{
+                position: absolute;
+                top: 1rem; left: 1rem;
+                border-radius: 0.5rem;
+                height: 4.5rem;
+                line-height: 4.3rem;
+                width: 5rem;
+                color: $--white;
+                font-size: 2rem;
+                background-color: $--red;
+
+                &:hover{
+                    background-color: $--black;
+                }
+            }
+
+            img{
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+
+            .name{
+                font-size: 2rem;
+                color: $--black;
+                padding-top: 1rem;
+            }
+
+            .qty{
+                margin: 0.5rem 0;
+                border-radius: 0.5rem;
+                padding: 1.2rem 1.4rem;
+                font-size: 1.8rem;
+                color: $--black;
+                border: $border;
+                width: 100%;
+            }
+        }
+    }
+
+    .cart-total{
+        max-width: 50rem;
+        margin: 0 auto;
+        margin-top: 3rem;
+        padding: 2rem;
+        text-align: center;
+        border: $border;
+        background-color: $--white;
+        box-shadow: $box-shadow;
+        border-radius: 0.5rem;
+
+        p{
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            color: $light-color;
+
+            span{
+                color: $--red;
+            }
+        }
+    }
+}
+
 /* footer - rodapé */
 .footer{
     background-color: $--white;
