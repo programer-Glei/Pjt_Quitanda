@@ -25,6 +25,14 @@ if(isset($_GET['delete_all'])){
     header('location:cart.php');
 }
 
+if(isset($_POST['update_qty'])){
+    $cart_id = $_POST['cart_id'];
+    $p_qty = $_POST['p_qty'];
+    $p_qty = filter_var($p_qty, FILTER_SANITIZE_STRING);
+    $update_qty = $conn->prepare("UPDATE `cart` SET quantity = ? WHERE id = ?");
+    $update_qty->execute([$p_qty, $cart_id]);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -56,10 +64,7 @@ if(isset($_GET['delete_all'])){
                 <img src="uploaded_img/<?= $fetch_cart['image']; ?>" alt="">
                 <div class="name"><?= $fetch_cart['name']; ?></div>
                 <div class="price">R$ <?= $fetch_cart['price']; ?></div>
-                <input type="hidden" name="pid" value="<?= $fetch_cart['pid'];?>">
-                <input type="hidden" name="p_name" value="<?= $fetch_cart['name'];?>">
-                <input type="hidden" name="p_price" value="<?= $fetch_cart['price'];?>">
-                <input type="hidden" name="p_image" value="<?= $fetch_cart['image'];?>">
+                <input type="hidden" name="cart_id" value="<?= $fetch_cart['id'];?>">
                 <div class="flex-btn">
                     <input type="number" min="1" value="<?= $fetch_cart['quantity'] ?>" class="qty" name="p_qty">
                     <input type="submit" value="Atualizar" name="update_qty" class="option-btn">
@@ -67,7 +72,7 @@ if(isset($_GET['delete_all'])){
                 <div class="sub-total"> Sub total: R$ <span><?=$sub_total =  ($fetch_cart['price'] * $fetch_cart['quantity']);?></span> </div>
             </form>
             <?php
-                $grand_total += $fetch_cart['price'];
+                $grand_total += $sub_total;
                 }
             }else{
                 echo '<p class="empty">Sua Lista de Desejos está vazia</p>';
@@ -76,7 +81,7 @@ if(isset($_GET['delete_all'])){
         </div>
         <div class="cart-total">
             <p>Geral total: <span>R$<?= $grand_total;?></span></p>
-            <a href="shpo.php" class="option-btn">Continue comprando</a>
+            <a href="shop.php" class="option-btn">Continue comprando</a>
             <a href="cart.php?delete_all" class="delete-btn <?= ($grand_total > 1)?'':'disabled';?>">Deletar todos</a>
         </div>
     </section>
