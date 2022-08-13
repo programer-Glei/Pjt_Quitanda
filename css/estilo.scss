@@ -1380,6 +1380,18 @@ section{
         }
     }
 
+    .wishlist{
+        .box-container{
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .shopping-cart{
+        .box-container{
+            grid-template-columns: 1fr;
+        }
+    }
+
     .quick-view{
         .box{
             img{

@@ -1509,6 +1509,14 @@ section {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+  .wishlist .box-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .shopping-cart .box-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
   .quick-view .box img {
     height: auto;
     width: 100%;
