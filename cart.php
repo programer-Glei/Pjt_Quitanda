@@ -46,9 +46,10 @@ if(!isset($user_id)){
                 <input type="hidden" name="p_price" value="<?= $fetch_cart['price'];?>">
                 <input type="hidden" name="p_image" value="<?= $fetch_cart['image'];?>">
                 <div class="flex-btn">
-                    <input type="number"  value="1" class="qty" name="p_qty">
+                    <input type="number" min="1" value="<?= $fetch_cart['quantity'] ?>" class="qty" name="p_qty">
                     <input type="submit" value="Atualizar" name="update_qty" class="option-btn">
                 </div>
+                <div class="sub-total"> Sub total: <span><?=$sub_total =  ($fetch_cart['price'] * $fetch_cart['quantity']);?></span> </div>
             </form>
             <?php
                 $grand_total += $fetch_cart['price'];
