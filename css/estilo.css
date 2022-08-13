@@ -1336,6 +1336,16 @@ section {
   width: 100%;
 }
 
+.shopping-cart .box-container .box .sub-total {
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: #666;
+}
+
+.shopping-cart .box-container .box .sub-total span {
+  color: #e74c3c;
+}
+
 .shopping-cart .cart-total {
   max-width: 50rem;
   margin: 0 auto;

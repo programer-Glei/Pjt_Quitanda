@@ -41,7 +41,7 @@ if(!isset($user_id)){
                 <img src="uploaded_img/<?= $fetch_cart['image']; ?>" alt="">
                 <div class="name"><?= $fetch_cart['name']; ?></div>
                 <div class="price">R$ <?= $fetch_cart['price']; ?></div>
-                <input type="hidden" name="pid" value="<?= $fetch_cart['id'];?>">
+                <input type="hidden" name="pid" value="<?= $fetch_cart['pid'];?>">
                 <input type="hidden" name="p_name" value="<?= $fetch_cart['name'];?>">
                 <input type="hidden" name="p_price" value="<?= $fetch_cart['price'];?>">
                 <input type="hidden" name="p_image" value="<?= $fetch_cart['image'];?>">
@@ -49,7 +49,7 @@ if(!isset($user_id)){
                     <input type="number" min="1" value="<?= $fetch_cart['quantity'] ?>" class="qty" name="p_qty">
                     <input type="submit" value="Atualizar" name="update_qty" class="option-btn">
                 </div>
-                <div class="sub-total"> Sub total: <span><?=$sub_total =  ($fetch_cart['price'] * $fetch_cart['quantity']);?></span> </div>
+                <div class="sub-total"> Sub total: R$ <span><?=$sub_total =  ($fetch_cart['price'] * $fetch_cart['quantity']);?></span> </div>
             </form>
             <?php
                 $grand_total += $fetch_cart['price'];

@@ -92,7 +92,7 @@ if(isset($_GET['delete_all'])){
                 <div class="name"><?= $fetch_wishlist['name']; ?></div>
                 <div class="price">R$ <?= $fetch_wishlist['price']; ?></div>
                 <input type="number"  value="1" class="qty" name="p_qty">
-                <input type="hidden" name="pid" value="<?= $fetch_wishlist['id'];?>">
+                <input type="hidden" name="pid" value="<?= $fetch_wishlist['pid'];?>">
                 <input type="hidden" name="p_name" value="<?= $fetch_wishlist['name'];?>">
                 <input type="hidden" name="p_price" value="<?= $fetch_wishlist['price'];?>">
                 <input type="hidden" name="p_image" value="<?= $fetch_wishlist['image'];?>">

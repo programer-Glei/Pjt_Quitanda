@@ -1174,6 +1174,16 @@ section{
                 border: $border;
                 width: 100%;
             }
+
+            .sub-total{
+                margin-top: 2rem;
+                font-size: 2rem;
+                color: $light-color;
+
+                span{
+                    color: $--red;
+                }
+            }
         }
     }
 
