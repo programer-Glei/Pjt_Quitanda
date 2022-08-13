@@ -8,6 +8,21 @@ $user_id = $_SESSION['user_id'];
 
 if(!isset($user_id)){
     header('location:login.php');
+};
+
+if(isset($_GET['delete'])){
+
+    $delete_id = $_GET['delete'];
+    $delete_cart_item = $conn->prepare("DELETE FROM `cart` WHERE id = ?");
+    $delete_cart_item->execute([$delete_id]);
+    header('location:cart.php');
+}
+
+if(isset($_GET['delete_all'])){
+
+    $delete_cart_item = $conn->prepare("DELETE FROM `cart` WHERE user_id = ?");
+    $delete_cart_item->execute([$user_id]);
+    header('location:cart.php');
 }
 
 ?>
