@@ -1210,6 +1210,21 @@ section{
     }
 }
 
+/*display-orders*/
+.display-orders{
+    p{
+        display: inline-block;
+        padding: 1rem 2rem;
+        margin: 0.5rem;
+        font-size: 2rem;
+        text-align: center;
+        border: $border;
+        background-color: $--white;
+        box-shadow: $box-shadow;
+        border-radius: 0.5rem;
+    }
+}
+
 /* footer - rodapé */
 .footer{
     background-color: $--white;

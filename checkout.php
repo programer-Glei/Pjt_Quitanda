@@ -25,8 +25,7 @@ if(!isset($user_id)){
 </head>
 <body>
     <?php include 'header.php'; ?>
-    <div class="display-orders">
-        <p class="empty">Seu carrinho está vazio</p>
+    <section class="display-orders">
         <?php
             $cart_grand_total = 0;
             $select_cart_items = $conn->prepare("SELECT * FROM `cart` WHERE user_id = ?");
@@ -43,7 +42,8 @@ if(!isset($user_id)){
             echo '<p class="empty">Seu carrinho está vazio</p>';
         }
         ?>
-    </div>
+        <div class="grand-total">Total dos Produtos: <span>R$ <?= $cart_grand_total;?></span> </div>
+    </section>
     <?php include 'footer.php'; ?>
     <script src="java/script.js"></script>
 </body>
