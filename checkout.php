@@ -1,5 +1,5 @@
 <?php
-
+header('Content-Type: text/html; charset=utf-8');
 @include 'config.php';
 
 session_start();
@@ -25,6 +25,22 @@ if(!isset($user_id)){
 </head>
 <body>
     <?php include 'header.php'; ?>
+    <div class="display-orders">
+        <p class="empty">Seu carrinho está vazio</p>
+        <?php
+            $cart_grand_total = 0;
+            $select_cart_items = $conn->prepare("SELECT * FROM `cart` WHERE user_id = ?");
+            $select_cart_items->execute([$user_id]);
+            if($select_cart_items->rowCount() > 0){
+                while($fetch_cart_items = $select_cart_items->fetch(PDO::FETCH_ASSOC)){
+                    $cart_total_price = $fetch_cart_items['price'] * $fetch_cart_items['quantity'];
+                }
+            }else{
+                echo '<p class="empty">Seu carrinho está vazio</p>'
+            }
+
+        ?>
+    </div>
     <?php include 'footer.php'; ?>
     <script src="java/script.js"></script>
 </body>
