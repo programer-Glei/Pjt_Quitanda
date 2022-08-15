@@ -34,11 +34,14 @@ if(!isset($user_id)){
             if($select_cart_items->rowCount() > 0){
                 while($fetch_cart_items = $select_cart_items->fetch(PDO::FETCH_ASSOC)){
                     $cart_total_price = $fetch_cart_items['price'] * $fetch_cart_items['quantity'];
-                }
-            }else{
-                echo '<p class="empty">Seu carrinho está vazio</p>'
+                    $cart_grand_total += $cart_total_price;
+        ?>
+        <p><?= $fetch_cart_items['name']; ?><span>(<?= 'R$' .$fetch_cart_items['price'] .' x '. $fetch_cart_items['quantity'];?>)</span></p>
+        <?php
             }
-
+        }else{
+            echo '<p class="empty">Seu carrinho está vazio</p>';
+        }
         ?>
     </div>
     <?php include 'footer.php'; ?>
