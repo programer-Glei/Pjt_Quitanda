@@ -35,7 +35,7 @@ if(!isset($user_id)){
                     $cart_total_price = $fetch_cart_items['price'] * $fetch_cart_items['quantity'];
                     $cart_grand_total += $cart_total_price;
         ?>
-        <p><?= $fetch_cart_items['name']; ?><span>(<?= 'R$' .$fetch_cart_items['price'] .' x '. $fetch_cart_items['quantity'];?>)</span></p>
+        <p><?= $fetch_cart_items['name']; ?><span>(<?= 'R$ ' .$fetch_cart_items['price'] .' x '. $fetch_cart_items['quantity'];?>)</span></p>
         <?php
             }
         }else{
@@ -43,6 +43,24 @@ if(!isset($user_id)){
         }
         ?>
         <div class="grand-total">Total dos Produtos: <span>R$ <?= $cart_grand_total;?></span> </div>
+    </section>
+    <section class="checkout-orders">
+        <form action="" method="POST">
+            <div class="flex">
+                <div class="inputBox">
+                    <span>Seu nome:</span>
+                    <input type="text" name="name" placeholder="Digite seu nome" class="box" required>
+                </div>
+                <div class="inputBox">
+                    <span>Seu número:</span>
+                    <input type="text" name="number" placeholder="Digite seu número" class="box" required>
+                </div>
+                <div class="inputBox">
+                    <span>Seu email:</span>
+                    <input type="email" name="email" placeholder="Digite seu email" class="box" required>
+                </div>
+            </div>
+        </form>
     </section>
     <?php include 'footer.php'; ?>
     <script src="java/script.js"></script>

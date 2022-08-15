@@ -1370,6 +1370,10 @@ section {
 }
 
 /*display-orders*/
+.display-orders {
+  text-align: center;
+}
+
 .display-orders p {
   display: inline-block;
   padding: 1rem 2rem;
@@ -1381,6 +1385,16 @@ section {
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
+}
+
+.display-orders p span {
+  color: #e74c3c;
+}
+
+.display-orders .grand-total {
+  margin-top: 2rem;
+  font-size: 2.5rem;
+  color: #666;
 }
 
 /* footer - rodapé */

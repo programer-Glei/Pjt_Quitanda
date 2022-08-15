@@ -1212,6 +1212,7 @@ section{
 
 /*display-orders*/
 .display-orders{
+    text-align: center;
     p{
         display: inline-block;
         padding: 1rem 2rem;
@@ -1222,6 +1223,20 @@ section{
         background-color: $--white;
         box-shadow: $box-shadow;
         border-radius: 0.5rem;
+
+        span{
+            color: $--red;
+        }
+    }
+
+    .grand-total{
+        margin-top: 2rem;
+        font-size: 2.5rem;
+        color: $light-color;
+
+        span{
+            color: $--red;
+        }
     }
 }
 
