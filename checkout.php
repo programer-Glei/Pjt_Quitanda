@@ -59,6 +59,12 @@ if(!isset($user_id)){
                     <span>Seu email:</span>
                     <input type="email" name="email" placeholder="Digite seu email" class="box" required>
                 </div>
+                <div class="inputBox">
+                    <span>Forma de pagamento:</span>
+                    <select name="method" class="box" required>
+                        <option value="cash_on_delivery">dinheiro na entrega</option>
+                    </select>
+                </div>
             </div>
         </form>
     </section>

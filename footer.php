@@ -2,7 +2,7 @@
     <section class="box-container">
         <div class="box">
             <h3>Links Rápidos</h3>
-            <a href="principal.php"> <i class="fas fa-angle-right"></i> Home</a>
+            <a href="index.php"> <i class="fas fa-angle-right"></i> Home</a>
             <a href="shop.php"> <i class="fas fa-angle-right"></i> Loja</a>
             <a href="about.php"> <i class="fas fa-angle-right"></i> Sobre nós</a>
             <a href="contact.php"> <i class="fas fa-angle-right"></i> Contatos</a>
