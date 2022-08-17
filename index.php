@@ -3,74 +3,27 @@ header('Content-Type: text/html; charset=utf-8');
 @include 'config.php';
 
 session_start();
+session_unset();
+session_destroy();
 
-$user_id = $_SESSION['user_id'];
-
-if(!isset($user_id)){
-    header('location:login.php');
-}
 
 if(isset($_POST['add_to_wishlist'])){
+    session_start();
 
-    $pid = $_POST['pid'];
-    $pid = filter_var($pid, FILTER_SANITIZE_STRING);
-    $p_name = $_POST['p_name'];
-    $p_name = filter_var($p_name, FILTER_SANITIZE_STRING);
-    $p_price = $_POST['p_price'];
-    $p_price = filter_var($p_price, FILTER_SANITIZE_STRING);
-    $p_image = $_POST['p_image'];
-    $p_image = filter_var($p_image, FILTER_SANITIZE_STRING);
+    $user_id = $_SESSION['user_id'];
 
-    $check_wishlist_number = $conn->prepare("SELECT * FROM `wishlist` WHERE name = ? AND user_id = ?");
-    $check_wishlist_number->execute([$p_name,$user_id]);
-
-    $check_cart_number = $conn->prepare("SELECT * FROM `cart` WHERE name = ? AND user_id = ?");
-    $check_cart_number->execute([$p_name,$user_id]);
-
-    if($check_wishlist_number->rowCount() > 0){
-        $message[] = 'já adicionado à lista de desejos';
-    }elseif($check_cart_number->rowCount() > 0){
-        $message[] = 'já adicionado ao carrinho';
-    }else{
-        $insert_wishlist = $conn->prepare("INSERT INTO `wishlist`(user_id, pid, name, price, image) VALUES(?,?,?,?,?)");
-        $insert_wishlist->execute([$user_id, $pid, $p_name, $p_price, $p_image]);
-        $message[] = 'adicionado a lista de desejos';
+    if(!isset($user_id)){
+        header('location:login.php');
     }
-
 }
 
 if(isset($_POST['add_to_cart'])){
+    session_start();
 
-    $pid = $_POST['pid'];
-    $pid = filter_var($pid, FILTER_SANITIZE_STRING);
-    $p_name = $_POST['p_name'];
-    $p_name = filter_var($p_name, FILTER_SANITIZE_STRING);
-    $p_price = $_POST['p_price'];
-    $p_price = filter_var($p_price, FILTER_SANITIZE_STRING);
-    $p_image = $_POST['p_image'];
-    $p_image = filter_var($p_image, FILTER_SANITIZE_STRING);
-    $p_qty = $_POST['p_qty'];
-    $p_qty = filter_var($p_qty, FILTER_SANITIZE_STRING);
+    $user_id = $_SESSION['user_id'];
 
-    $check_cart_number = $conn->prepare("SELECT * FROM `cart` WHERE name = ? AND user_id = ?");
-    $check_cart_number->execute([$p_name,$user_id]);
-
-    
-    if($check_cart_number->rowCount() > 0){
-        $message[] = 'já adicionado ao carrinho';
-    }else{
-
-        $check_wishlist_number = $conn->prepare("SELECT * FROM `wishlist` WHERE name = ? AND user_id = ?");
-        $check_wishlist_number->execute([$p_name,$user_id]);
-
-        if($check_wishlist_number->rowCount() > 0){
-            $delete_wishlist = $conn->prepare("DELETE FROM `wishlist` WHERE name = ? AND user_id = ?");
-            $delete_wishlist->execute([$p_name,$user_id]);
-        }
-
-        $insert_cart = $conn->prepare("INSERT INTO `cart`(user_id, pid, name, price, quantity, image) VALUES(?,?,?,?,?,?)");
-        $insert_cart->execute([$user_id, $pid, $p_name, $p_price, $p_qty, $p_image]);
-        $message[] = 'adicionado ao carrinho!';
+    if(!isset($user_id)){
+        header('location:login.php');
     }
 }
 
@@ -88,7 +41,7 @@ if(isset($_POST['add_to_cart'])){
     <title>Ortifruit Herplim</title>
 </head>
 <body>
-    <?php include 'header.php'; ?>
+    <?php include 'header_2.php'; ?>
     <div class="home-bg">
         <section class="home">
             <div class="content">

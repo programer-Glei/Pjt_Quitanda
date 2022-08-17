@@ -25,7 +25,7 @@ if(isset($_POST['submit'])){
         }elseif($row['user_type'] == 'user'){
 
             $_SESSION['user_id'] = $row['id'];
-            header('location:index.php');
+            header('location:principal.php');
         }else{
             $message[] = 'Nenhum usuário encontrado!';
         }
