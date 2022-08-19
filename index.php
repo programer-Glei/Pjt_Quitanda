@@ -91,8 +91,8 @@ if(isset($_POST['add_to_cart'])){
                     while($fetch_products = $select_products->fetch(PDO::FETCH_ASSOC)){
             ?>
             <form action="" class="box" method="POST">
-                <div class="price">R$<?= $fetch_products['price']; ?></div>
-                <a href="view_page.php?pid=<?= $fetch_products['id']; ?>"  class="fas fa-eye"></a>
+                <div class="price">R$ <?= $fetch_products['price']; ?></div>
+                <a href="view_page_in.php?pid=<?= $fetch_products['id']; ?>"  class="fas fa-eye"></a>
                 <img src="uploaded_img/<?= $fetch_products['image']; ?>" alt="">
                 <div class="name"><?= $fetch_products['name']; ?></div>
                 <input type="hidden" name="pid" value="<?= $fetch_products['id']; ?>">

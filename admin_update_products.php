@@ -1,5 +1,5 @@
 <?php
-
+header('Content-Type: text/html; charset=utf-8');
 @include 'config.php';
 
 session_start();
@@ -84,7 +84,7 @@ if(isset($_POST['update_product'])){
             <input type="hidden" name="pid" value="<?= $fetch_products['id']; ?>">
             <img src="uploaded_img/<?= $fetch_products['image']; ?>" alt="">
             <input type="text" name="name" placeholder="Digitar nome" required class="box" value="<?= $fetch_products['name']; ?>">
-            <input type="number" name="price" placeholder="Digitar preço" required class="box" value="<?= $fetch_products['price']; ?>">
+            <input type="text" name="price" placeholder="Digitar preço" required class="box" value="<?= $fetch_products['price']; ?>">
             <select name="category" class="box" required>
                 <option selected><?= $fetch_products['category']; ?></option>
                 <option value="vegitbales">Vegetais</option>

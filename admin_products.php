@@ -94,7 +94,7 @@ if(isset($_GET['delete'])){
                     </select>
                 </div>
                 <div class="inputbox">
-                    <input type="number" min="0" name="price" class="box" required placeholder="Insira o preço do produto">
+                    <input type="text" min="0" name="price" class="box" required placeholder="Insira o preço do produto">
                     <input type="file" name="image" class="box" required accept="image/jpg, image/jpeg, image/png">
                 </div>
             </div>
@@ -112,7 +112,7 @@ if(isset($_GET['delete'])){
                     while($fetch_products = $show_products->fetch(PDO::FETCH_ASSOC)){
             ?>
             <div class="box">
-                <div class="price">$<?= $fetch_products['price'];?></div>
+                <div class="price">R$<?= $fetch_products['price'];?></div>
                 <img src="uploaded_img/<?= $fetch_products['image']; ?>" alt="">
                 <div class="name"><?= $fetch_products['name'];?></div>
                 <div class="cat"><?= $fetch_products['category'];?></div>
