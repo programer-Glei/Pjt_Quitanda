@@ -2,14 +2,6 @@
 header('Content-Type: text/html; charset=utf-8');
 @include 'config.php';
 
-session_start();
-
-$user_id = $_SESSION['user_id'];
-
-if(!isset($user_id)){
-    header('location:login.php');
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +16,7 @@ if(!isset($user_id)){
     <title>Sobre nós</title>
 </head>
 <body>
-    <?php include 'header.php'; ?>
+    <?php include 'header_2.php'; ?>
     <section class="about">
         <div class="row">
             <div class="box">

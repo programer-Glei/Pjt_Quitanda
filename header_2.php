@@ -18,7 +18,7 @@ if(isset($message)){
         <a href="index.php" class="logo">Ortifruit <span>Herplim</span></a>
         <nav class="navbar">
             <a href="index.php">Home</a>
-            <a href="shop.php">Loja</a>
+            <a href="shop_in.php">Loja</a>
             <a href="about.php">Sobre</a>
             <a href="contact.php">Contatos</a>
         </nav>
