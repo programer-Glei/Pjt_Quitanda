@@ -8,6 +8,26 @@ $user_id = $_SESSION['user_id'];
 
 if(!isset($user_id)){
     header('location:login.php');
+};
+
+if(isset($_POST['order'])){
+
+    $name = $_POST['name'];
+    $name = filter_var($name, FILTER_SANITIZE_STRING);
+    $number = $_POST['number'];
+    $number = filter_var($number, FILTER_SANITIZE_STRING);
+    $email = $_POST['email'];
+    $email = filter_var($email, FILTER_SANITIZE_STRING);
+    $method = $_POST['method'];
+    $method = filter_var($method, FILTER_SANITIZE_STRING);
+    $rua = $_POST['rua'];
+    $rua = filter_var($rua, FILTER_SANITIZE_STRING);
+    $n_rua = $_POST['n_rua'];
+    $n_rua = filter_var($n_rua, FILTER_SANITIZE_STRING);
+    $bairro = $_POST['bairro'];
+    $bairro = filter_var($bairro, FILTER_SANITIZE_STRING);
+    $cep = $_POST['cep'];
+    $cep = filter_var($cep, FILTER_SANITIZE_STRING);
 }
 
 ?>
