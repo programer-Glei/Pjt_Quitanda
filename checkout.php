@@ -28,6 +28,24 @@ if(isset($_POST['order'])){
     $bairro = filter_var($bairro, FILTER_SANITIZE_STRING);
     $cep = $_POST['cep'];
     $cep = filter_var($cep, FILTER_SANITIZE_STRING);
+    $city = $_POST['city'];
+    $city = filter_var($city, FILTER_SANITIZE_STRING);
+    $state = $_POST['state'];
+    $state = filter_var($state, FILTER_SANITIZE_STRING);
+    $data = date('d-M-Y');
+
+    $cart_total = 0;
+    $cart_products[] = '';
+
+    $cart_query = $conn->prepare("SELECT * FROM `cart` WHERE user_id = ?");
+    $cart_query->execute([$user_id]);
+    if($cart_query->rowCount() > 0){
+        while($cart_item = $cart_query->fetch(PDO::FETCH_ASSOC)){
+            $cart_products[] = $cart_item['name'].'('.$cart_item['quantity'].')';
+            $sub_total = ($cart_item['price'] * $cart_item['quantity']);
+            $cart_total += $sub_total;
+        }
+    }
 }
 
 ?>
@@ -113,7 +131,7 @@ if(isset($_POST['order'])){
                     <input type="text" name="state" placeholder="Seu estado" class="box" required>
                 </div>
             </div>
-            <input type="submit" name="order" value="Finalizar compra" class="btn">
+            <input type="submit" name="order" value="Finalizar compra" class="btn <?= ($cart_grand_total > 1)?'':disabled;?>">
         </form>
     </section>
     <?php include 'footer.php'; ?>
