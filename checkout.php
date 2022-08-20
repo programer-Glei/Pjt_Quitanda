@@ -62,10 +62,37 @@ if(!isset($user_id)){
                 <div class="inputBox">
                     <span>Forma de pagamento:</span>
                     <select name="method" class="box" required>
-                        <option value="cash_on_delivery">dinheiro na entrega</option>
+                        <option value="cash_on_delivery">Dinheiro na entrega</option>
+                        <option value="credit card">Cartão de credito</option>
+                        <option value="paypal">Paypal</option>
                     </select>
                 </div>
+                <div class="inputBox">
+                    <span>Endereço:</span>
+                    <input type="text" name="rua" placeholder="Digite sua rua" class="box" required>
+                </div>
+                <div class="inputBox">
+                    <span>Número da casa / apartamento:</span>
+                    <input type="text" name="n_rua" placeholder="Nº da casa ou Nº do apartamento" class="box" required>
+                </div>
+                <div class="inputBox">
+                    <span>Bairro:</span>
+                    <input type="text" name="bairro" placeholder="Seu bairro" class="box" required>
+                </div>
+                <div class="inputBox">
+                    <span>Cep:</span>
+                    <input type="text" name="cep" placeholder="Digite seu cep" class="box" required>
+                </div>
+                <div class="inputBox">
+                    <span>Cidade:</span>
+                    <input type="text" name="city" placeholder="Sua cidade" class="box" required>
+                </div>
+                <div class="inputBox">
+                    <span>Estado:</span>
+                    <input type="text" name="state" placeholder="Seu estado" class="box" required>
+                </div>
             </div>
+            <input type="submit" name="order" value="Finalizar compra" class="btn">
         </form>
     </section>
     <?php include 'footer.php'; ?>
