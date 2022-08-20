@@ -46,6 +46,7 @@ if(!isset($user_id)){
     </section>
     <section class="checkout-orders">
         <form action="" method="POST">
+            <h3>Finalize seu pedido</h3>
             <div class="flex">
                 <div class="inputBox">
                     <span>Seu nome:</span>

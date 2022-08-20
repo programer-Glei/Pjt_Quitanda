@@ -1240,6 +1240,40 @@ section{
     }
 }
 
+/*checkout-orders*/
+.checkout-orders{
+    form{
+        font-size: 2rem;
+        padding: 2rem;
+        border: $border;
+        background-color: $--white;
+        box-shadow: $box-shadow;
+        border-radius: 0.5rem;
+
+        h3{
+            border-radius: 0.5rem;
+            background-color: $--black;
+            color: $--white;
+            padding: 1.5rem 1rem;
+            text-align: center;
+        }
+
+        .flex{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: space-between;
+
+            .inputBox{
+                width: 49%;
+
+                .box{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
 /* footer - rodapé */
 .footer{
     background-color: $--white;

@@ -1397,6 +1397,49 @@ section {
   color: #666;
 }
 
+.display-orders .grand-total span {
+  color: #e74c3c;
+}
+
+/*checkout-orders*/
+.checkout-orders form {
+  font-size: 2rem;
+  padding: 2rem;
+  border: 0.2rem solid #333;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+.checkout-orders form h3 {
+  border-radius: 0.5rem;
+  background-color: #333;
+  color: #fff;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.checkout-orders form .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.checkout-orders form .flex .inputBox {
+  width: 49%;
+}
+
+.checkout-orders form .flex .inputBox .box {
+  width: 100%;
+}
+
 /* footer - rodapé */
 .footer {
   background-color: #fff;
