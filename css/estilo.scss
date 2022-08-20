@@ -1213,10 +1213,11 @@ section{
 /*display-orders*/
 .display-orders{
     text-align: center;
+    padding-bottom: 0;
     p{
         display: inline-block;
         padding: 1rem 2rem;
-        margin: 0.5rem;
+        margin: 1rem 0.5rem;
         font-size: 2rem;
         text-align: center;
         border: $border;
@@ -1243,7 +1244,6 @@ section{
 /*checkout-orders*/
 .checkout-orders{
     form{
-        font-size: 2rem;
         padding: 2rem;
         border: $border;
         background-color: $--white;
@@ -1256,6 +1256,8 @@ section{
             color: $--white;
             padding: 1.5rem 1rem;
             text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
         }
 
         .flex{
@@ -1267,8 +1269,20 @@ section{
             .inputBox{
                 width: 49%;
 
+                span{
+                    font-size: 1.8rem;
+                    color: $light-color;
+                }
+
                 .box{
                     width: 100%;
+                    border: $border;
+                    border-radius: 0.5rem;
+                    font-size: 1.8rem;
+                    color: $--black;
+                    padding: 1.2rem 1.4rem;
+                    margin: 1rem 0;
+                    background-color: $--light-bg;
                 }
             }
         }
@@ -1379,6 +1393,18 @@ section{
         .home{
             justify-content: center;
             text-align: center;
+        }
+    }
+
+    .checkout-orders{
+        form{
+    
+            .flex{
+    
+                .inputBox{
+                    width: 100%;
+                }
+            }
         }
     }
 }

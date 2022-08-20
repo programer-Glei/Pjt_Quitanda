@@ -1372,12 +1372,13 @@ section {
 /*display-orders*/
 .display-orders {
   text-align: center;
+  padding-bottom: 0;
 }
 
 .display-orders p {
   display: inline-block;
   padding: 1rem 2rem;
-  margin: 0.5rem;
+  margin: 1rem 0.5rem;
   font-size: 2rem;
   text-align: center;
   border: 0.2rem solid #333;
@@ -1403,7 +1404,6 @@ section {
 
 /*checkout-orders*/
 .checkout-orders form {
-  font-size: 2rem;
   padding: 2rem;
   border: 0.2rem solid #333;
   background-color: #fff;
@@ -1418,6 +1418,8 @@ section {
   color: #fff;
   padding: 1.5rem 1rem;
   text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
 }
 
 .checkout-orders form .flex {
@@ -1436,8 +1438,20 @@ section {
   width: 49%;
 }
 
+.checkout-orders form .flex .inputBox span {
+  font-size: 1.8rem;
+  color: #666;
+}
+
 .checkout-orders form .flex .inputBox .box {
   width: 100%;
+  border: 0.2rem solid #333;
+  border-radius: 0.5rem;
+  font-size: 1.8rem;
+  color: #333;
+  padding: 1.2rem 1.4rem;
+  margin: 1rem 0;
+  background-color: #f6f6f6;
 }
 
 /* footer - rodapé */
@@ -1535,6 +1549,9 @@ section {
         -ms-flex-pack: center;
             justify-content: center;
     text-align: center;
+  }
+  .checkout-orders form .flex .inputBox {
+    width: 100%;
   }
 }
 
