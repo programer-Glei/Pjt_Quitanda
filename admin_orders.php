@@ -62,7 +62,7 @@ if(isset($_GET['delete'])){
                 <p>Endereço: <span><?=$fetch_orders['address'];?></span>  </p>
                 <p>Total de produtos: <span><?=$fetch_orders['total_products'];?></span>  </p>
                 <p>Preço total: <span><?=$fetch_orders['total_price'];?></span>  </p>
-                <p>Forma de pagamento: <span><?=$fetch_orders['total_price'];?></span>  </p>
+                <p>Forma de pagamento: <span><?=$fetch_orders['payment_status'];?></span>  </p>
                 <form action="" method="POST">
                     <input type="hidden" name="order_id" value="<?= $fetch_orders['id'];?>">
                     <select name="update_payment" class="drop-down">
