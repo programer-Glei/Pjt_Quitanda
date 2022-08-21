@@ -20,18 +20,8 @@ if(isset($_POST['order'])){
     $email = filter_var($email, FILTER_SANITIZE_STRING);
     $method = $_POST['method'];
     $method = filter_var($method, FILTER_SANITIZE_STRING);
-    $rua = $_POST['rua'];
-    $rua = filter_var($rua, FILTER_SANITIZE_STRING);
-    $n_rua = $_POST['n_rua'];
-    $n_rua = filter_var($n_rua, FILTER_SANITIZE_STRING);
-    $bairro = $_POST['bairro'];
-    $bairro = filter_var($bairro, FILTER_SANITIZE_STRING);
-    $cep = $_POST['cep'];
-    $cep = filter_var($cep, FILTER_SANITIZE_STRING);
-    $city = $_POST['city'];
-    $city = filter_var($city, FILTER_SANITIZE_STRING);
-    $state = $_POST['state'];
-    $state = filter_var($state, FILTER_SANITIZE_STRING);
+    $address = $_POST['rua']. ', '.$_POST['n_rua']. ', '.$_POST['bairro']. $_POST['cep']. $_POST['city']. $_POST['state'];
+    $address = filter_var($rua, FILTER_SANITIZE_STRING);
     $data = date('d-M-Y');
 
     $cart_total = 0;
@@ -45,6 +35,20 @@ if(isset($_POST['order'])){
             $sub_total = ($cart_item['price'] * $cart_item['quantity']);
             $cart_total += $sub_total;
         }
+    }
+
+    $total_products = implode(', ', $cart_products);
+
+    $order_query = $conn->prepare("SELECT * FROM `orders` WHERE name = ? AND number = ? AND email = ? AND method = ? AND address = ? AND total_products = ? AND total_price = ?");
+    $order_qyery->execute([$name, $number, $email, $method, $address, $total_products, $cart_total]);
+
+    if($cart_total == 0){
+        $message[] = 'Seu carrinho está vazio';
+    }elseif($order_query->rowCount() == 0){
+        $message[] = 'Pedido já feito';
+    }else{
+        $insert_order = $conn->prepare("INSERT INTO `orders`(user_id, name, number, email, method, address, total_products, total_price, placed_on) VALUES (?,?,?,?,?,?,?,?,?)");
+        $insert_order->execute([$user_id, $name, $number, $email, $method, $address, $total_products, $cart_total, $data]);
     }
 }
 
