@@ -25,6 +25,23 @@ if(!isset($user_id)){
 </head>
 <body>
     <?php include 'header.php'; ?>
+    <section class="placed-orders">
+        <h1 class="title">Pedidos feitos</h1>
+        <div class="box-container">
+            <?php
+                $select_orders = $conn->prepare("SELECT * FROM `orders` WHERE user_id= ?");
+                $select_orders->execute([$user_id]);
+                if($select_orders->rowCount() > 0){
+                    while($fetch_orders = $select_orders->fetch(PDO::FETCH_ASSOC)){
+            ?>
+            <?php
+                 }
+                }else{
+                    echo '<p class="empty">Nenhum pedido feito ainda!</p>';
+                }
+            ?>
+        </div>
+    </section>
     <?php include 'footer.php'; ?>
     <script src="java/script.js"></script>
 </body>
