@@ -34,6 +34,14 @@ if(!isset($user_id)){
                 if($select_orders->rowCount() > 0){
                     while($fetch_orders = $select_orders->fetch(PDO::FETCH_ASSOC)){
             ?>
+            <div class="box">
+                <p>Data da compra: <span><?= $fetch_orders['placed_on'];?></span>  </p>
+                <p>Nome: <span><?= $fetch_orders['name'];?></span>  </p>
+                <p>Número: <span><?= $fetch_orders['number'];?></span>  </p>
+                <p>Email: <span><?= $fetch_orders['email'];?></span>  </p>
+                <p>Endereço: <span><?= $fetch_orders['address'];?></span>  </p>
+                <p>Forma de pagamento: <span><?= $fetch_orders['method'];?></span>  </p>
+            </div>
             <?php
                  }
                 }else{
