@@ -41,6 +41,9 @@ if(!isset($user_id)){
                 <p>Email: <span><?= $fetch_orders['email'];?></span>  </p>
                 <p>Endereço: <span><?= $fetch_orders['address'];?></span>  </p>
                 <p>Forma de pagamento: <span><?= $fetch_orders['method'];?></span>  </p>
+                <p>Seus pedidos: <span><?= $fetch_orders['total_products'];?></span>  </p>
+                <p>Preço total: <span>R$ <?= $fetch_orders['total_price'];?></span>  </p>
+                <p>Status do pagamento: <span style="color:<?php if($fetch_orders['payment_status'] == 'pendente'){echo 'red';}else{echo 'green';};?>"><?= $fetch_orders['payment_status'];?></span>  </p>
             </div>
             <?php
                  }
